@@ -1,0 +1,117 @@
+doctype
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+    link(rel="stylesheet", href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css")
+    link(rel="stylesheet", href="css/index.css")
+    title 我的订单
+  body.page-myorders
+    header.topbar
+      p 我的订单
+    div.container
+      ul
+        li.order
+          div.order-wrapper
+            div.title 包车送机
+            div.status
+              p.state.fr 已完成
+              div.time
+                div.time-l.fl
+                  span.fl 预约时间：
+                  span.data-booking-time 2016年5月24日
+                  div.clear
+                div.clear
+              div.clear
+            div.comment
+              div.comment-r.fr
+                div.star_bg
+                  input(type="radio",value='1',name='score').score.score_1
+                  a(href="#", title='差').star.star_1
+                  input(type="radio",value='2',name='score').score.score_2
+                  a(href="#", title='较差').star.star_2
+                  input(type="radio",value='3',name='score').score.score_3
+                  a(href="#", title='普通').star.star_3
+                  input(type="radio",value='4',name='score').score.score_4
+                  a(href="#", title='较好').star.star_4
+                  input(type="radio",value='5',name='score').score.score_5
+                  a(href="#", title='好').star.star_5
+              div.comment-l
+                span 评论：
+                span.data-comment 非常准时！
+              div.clear
+            div.commentphotos
+              ul
+                - for (var i = 0; i < 4; i++)
+                  li.fl
+                    img(src="images/user-upload.png")
+                div.clear
+        li.order
+          div.order-wrapper
+            div.title 租用汽车
+            div.info
+              p.getcarcity
+                span 取车城市：
+                span.data 北京
+              p.returncarcity
+                span 还车城市：
+                span.data 北京
+              p.renttime
+                span 租用时间：
+                span.data 两天半
+            div.status
+              p.state.fr 已完成
+              div.time
+                div.time-l.fl
+                  span.fl 预约时间：
+                  span.data-booking-time 2016年5月24日-2016年6月3日中午12：00
+                  div.clear
+                div.clear
+              div.clear
+            div.comment
+              div.comment-l
+                span 评论：
+                span.data-comment 车很好用！车很好用！车很好用！重要的事情说三遍！
+              div.comment-r.fr
+                div.star_bg
+                  input(type="radio",value='1',name='score').score.score_1
+                  a(href="#", title='差').star.star_1
+                  input(type="radio",value='2',name='score').score.score_2
+                  a(href="#", title='较差').star.star_2
+                  input(type="radio",value='3',name='score').score.score_3
+                  a(href="#", title='普通').star.star_3
+                  input(type="radio",value='4',name='score').score.score_4
+                  a(href="#", title='较好').star.star_4
+                  input(type="radio",value='5',name='score').score.score_5
+                  a(href="#", title='好').star.star_5
+              div.clear
+            div.commentphotos
+              ul
+                - for (var i = 0; i < 4; i++)
+                  li.fl
+                    img(src="images/user-upload.png")
+                div.clear
+        li.order
+          div.order-wrapper
+            div.title 包车接站
+            div.status
+              p.state.fr 已完成
+              div.time
+                div.time-l.fl
+                  span.fl 预约时间：
+                  span.data-booking-time 2016年6月2日
+                  div.clear
+                div.clear
+              div.clear
+        li.order
+          div.order-wrapper
+            div.title 包车送站
+            div.status
+              p.state.fr 进行中
+              div.time
+                div.time-l.fl
+                  span.fl 预约时间：
+                  span.data-booking-time 2016年6月6日
+                  div.clear
+                div.clear
+              div.clear

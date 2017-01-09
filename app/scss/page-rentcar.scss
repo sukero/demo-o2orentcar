@@ -1,0 +1,86 @@
+@import "styles.css";
+
+// Variables
+$themecolor: #ffd071;
+$submitbtnbg: #ffc34a;
+$btnbordercolor: #ff8f06;
+$borderlight:#bebebe;
+$bglight: #e6e6e6;
+$fontlight: #7d7d7d;
+
+/* 租车界面 page-rentcar */
+.page-rentcar {
+  font-family: '黑体', 'Microsoft Yahei', sans-serif;
+
+  & .container {
+    & li {
+      height: 100px;
+      border-bottom: 2px solid $borderlight;
+
+      & a {
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        & .car-option {
+          width: 100%;
+          height: 100%;
+          & .car-option-detail, & .car-option-price.fr {
+            height: 100%;
+          }
+          & .car-option-img-wrapper.fl {
+            display: inline-block;
+            width: 90px;
+            padding: 20px 0;
+            padding-left: 10px;
+
+            & img {
+              width: 100%;
+            }
+          }
+          & .car-option-detail {
+            margin: 0 100px;
+            line-height: 2rem;
+            & .car-brand {
+              padding-top: 20px;
+              height: 50px;
+              font-size: 1.3rem;
+              font-weight: bold;
+              color: $themecolor;
+            }
+            & .car-traits {
+              padding-bottom: 20px;
+              height: 50px;
+              color: $fontlight;
+            }
+          }
+          & .car-option-price.fr {
+            width: 90px;
+            padding-right: 10px;
+
+            & .car-option-price-l {
+                color: black;
+                line-height: 20px;
+                padding: 30px 0;
+                & p {
+                  vertical-align: bottom;
+                }
+                & span {
+                  color: red;
+                  font-family: 'Microsoft Yahei', sans-serif;
+                  font-weight: bold;
+                  font-size: 1.2rem;
+                  vertical-align: top;
+                }
+            }
+            & i {
+              font-size: 3rem;
+              color: $fontlight;
+              line-height: 100px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

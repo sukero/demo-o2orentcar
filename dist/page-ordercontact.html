@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/lib/validate.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>专车订单详情页-立即叫车</title>
+  </head>
+  <body class="page-ordercontact">
+    <header class="topbar"><a href="page-orderexclusivecar.html" class="fl"><i class="fa fa-angle-left"></i></a>
+      <p>立即叫车</p>
+      <div class="fr"></div>
+      <div class="clear"></div>
+    </header>
+    <div class="container">
+      <form action="post" id="form1">
+        <ul>
+          <li class="contact-tel contact-option">
+            <div class="contact-info fl"><span class="fr">+86</span><i class="fa fa-user"></i>
+              <div class="clear"></div>
+            </div><span class="span-r fr"></span>
+            <div class="contact-input control-field">
+              <input type="tel" placeholder="请输入手机号" data-validate="phone" date-required="true" data-describedby="phone-description" class="field-text">
+            </div>
+            <div class="clear"></div>
+          </li>
+          <li class="contact-loca contact-option">
+            <div class="contact-info fl"><span class="data-loca-city fr">天津</span><i class="fa fa-map-marker"></i>
+              <div class="clear"></div>
+            </div><span class="span-r fr">出发地</span>
+            <div class="contact-input control-field">
+              <input type="text" placeholder="请输入出发地" data-validate="start" date-required="true" data-describedby="start-description" class="field-text">
+            </div>
+            <div class="clear"></div>
+          </li>
+          <li class="contact-loca contact-option">
+            <div class="contact-info fl"><span class="data-loca-city fr">天津</span><i class="fa fa-map-marker"></i>
+              <div class="clear"></div>
+            </div><span class="span-r fr">目的地</span>
+            <div class="contact-input control-field">
+              <input type="text" placeholder="请输入目的地" data-validate="dest" date-required="true" data-describedby="dest-description" class="field-text">
+            </div>
+            <div class="clear"></div>
+          </li>
+          <li class="contact-category contact-option">
+            <ul>
+              <li class="fl">
+                <label for="gongwu">公务车</label><span class="contact-category-radio-wrapper on">
+                  <input checked="checked" type="radio" name="contact-category" value="gongwu" id="gongwu"></span>
+              </li>
+              <li class="fl">
+                <label for="shangwu">商务车</label><span class="contact-category-radio-wrapper">
+                  <input type="radio" name="contact-category" value="shangwu" id="shangwu"></span>
+              </li>
+              <li class="fl">
+                <label for="haohua">豪华轿车</label><span class="contact-category-radio-wrapper">
+                  <input type="radio" name="contact-category" value="haohua" id="haohua"></span>
+              </li>
+              <div class="clear"></div>
+            </ul>
+          </li>
+          <li class="contact-coupon contact-option"><a href="page-mycoupons.html">
+              <div class="contact-coupon-r fr"><i class="fa fa-angle-right fr"></i><span>未使用优惠券</span>
+                <div class="clear"></div>
+              </div>
+              <div class="contact-coupon-l"><i class="icon-mycoupon fl"></i><span>优惠券</span>
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div></a></li>
+        </ul>
+        <footer class="footerbar">
+          <div class="footerbar-l fl"><span>预估价：</span><span class="data-price">366</span><span>元</span></div>
+          <div class="footerbar-r fr">
+            <input type="submit" value="提 交" class="normal-btn">
+          </div>
+          <div class="clear"></div>
+        </footer>
+      </form>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js"></script>
+    <script src="js/radio.js"></script>
+    <script src="js/lib/jquery-mvalidate.js"></script>
+    <script>
+      $(function(){
+        $.mvalidateExtend({
+            phone:{
+                required : true,   
+                pattern : /^0?1[3|4|5|8][0-9]\d{8}$/,
+                each: function () {
+                  
+                },
+                descriptions:{
+                    required : '<div class="field-invalidmsg">请输入手机号码</div>',
+                    pattern : '<div class="field-invalidmsg">手机号码格式不正确</div>',
+                    valid : '<div class="field-validmsg">正确</div>'
+                }
+            },
+            start: {
+              required: true,
+              descriptions:{
+                  required : '<div class="field-invalidmsg">请输入出发地</div>'
+              }
+            },
+            dest: {
+              required: true,
+              descriptions: {
+                required: '<div class="field-invalidmsg">请输入目的地</div>'
+              }
+            }
+        });
+        var instance=null;
+        function show(text){
+          if(!instance){
+            var $container=$('<div class="field-tooltipWrap"><div class="field-tooltipInner"><div class="field-tooltip fieldTipBounceIn">'+'<div class="zvalid-resultformat"><div class="field-invalidmsg">'+text+'</div></div></div></div></div>');
+              $container.css('background', 'red');
+              $container.appendTo($("body"));
+              instance=true;
+              setTimeout(function(){
+              $container.remove();
+              instance=false;
+            },1500)
+          }
+        }
+        $("#form1").mvalidate({
+          type:1,
+          onKeyup:true,
+          sendForm:true,
+          firstInvalidFocus:false,
+          valid:function(event,options){
+              //点击提交按钮时,表单通过验证触发函数
+              show('验证通过');
+              event.preventDefault();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

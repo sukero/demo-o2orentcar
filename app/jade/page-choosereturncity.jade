@@ -1,0 +1,45 @@
+doctype
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+    link(rel="stylesheet", href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css")
+    link(rel="stylesheet", href="css/index.css")
+    title 还车城市
+  body.page-choosereturncity
+    header.topbar
+      a(href="page-ordercar.html").fl
+        i.fa.fa-angle-left
+      p 还车城市
+      div.fr
+      div.clear
+    div.container
+      p 热门城市
+      div.cities
+        mixin citygroup(cities)
+          ul
+            - each city in cities
+              li.eachcity.fl
+                a(href="#")= city
+            div.clear
+        - var citygroup1 = ['上海', '北京', '广州', '深圳', '杭州']
+        - var citygroup2 = ['南京', '青岛', '武汉', '成都', '重庆']
+        - var citygroup3 = ['长沙', '西安', '兰州', '乌鲁木齐', '拉萨']
+        - var citygroup4 = ['西宁', '银川', '天津', '大连', '三亚']
+        - var citygroup5 = ['昆明', '丽江', '大理', '贵阳']
+        ul
+          li.citygroup
+            +citygroup(citygroup1)
+            div.clear
+          li.citygroup
+            +citygroup(citygroup2)
+            div.clear
+          li.citygroup
+            +citygroup(citygroup3)
+            div.clear
+          li.citygroup
+            +citygroup(citygroup4)
+            div.clear
+          li.citygroup
+            +citygroup(citygroup5)
+            div.clear            

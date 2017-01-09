@@ -1,0 +1,67 @@
+@charset "UTF-8";
+@import url(styles.css);
+/* 客户填写页 page-getcaptcha */
+.page-getcaptcha .container {
+  padding-top: 100px; }
+  .page-getcaptcha .container li {
+    width: 100%;
+    padding: 7px 30px; }
+    .page-getcaptcha .container li:last-child {
+      margin-top: 100px; }
+    .page-getcaptcha .container li .enter-tel, .page-getcaptcha .container li .enter-captcha-l {
+      padding: 3px 0;
+      border: 1px solid #ff8f06; }
+    .page-getcaptcha .container li .enter-tel i {
+      display: block;
+      width: 30px;
+      font-size: 2rem;
+      padding: 3px 6px;
+      color: #ff8f06;
+      border-right: 1px solid #bebebe; }
+    .page-getcaptcha .container li .enter-tel .input-wrapper {
+      margin-left: 35px;
+      height: 40px;
+      padding: 5px 0;
+      padding-left: 5px; }
+      .page-getcaptcha .container li .enter-tel .input-wrapper input {
+        height: 30px;
+        font-size: 1rem; }
+    .page-getcaptcha .container li .enter-captcha {
+      width: 100%;
+      padding: 3px 0; }
+      .page-getcaptcha .container li .enter-captcha .enter-captcha-l {
+        margin-right: 110px; }
+        .page-getcaptcha .container li .enter-captcha .enter-captcha-l i {
+          display: block;
+          width: 30px;
+          font-size: 1.2rem;
+          color: #ff8f06;
+          padding: 10px 5px;
+          border-right: 1px solid #bebebe; }
+        .page-getcaptcha .container li .enter-captcha .enter-captcha-l .input-wrapper {
+          margin-left: 35px;
+          height: 40px;
+          padding: 5px 0;
+          padding-left: 5px; }
+          .page-getcaptcha .container li .enter-captcha .enter-captcha-l .input-wrapper input {
+            width: 90%;
+            margin: 0 auto;
+            height: 30px;
+            font-size: 1rem; }
+      .page-getcaptcha .container li .enter-captcha .enter-captcha-r {
+        width: 100px;
+        padding: 3px 0; }
+        .page-getcaptcha .container li .enter-captcha .enter-captcha-r button {
+          width: 100%;
+          padding: 10px;
+          color: white;
+          background: #ffc34a;
+          border: 1px solid #ff8f06;
+          border-radius: 5px; }
+    .page-getcaptcha .container li .btn-wrapper {
+      width: 100%;
+      padding: 0 80px; }
+      .page-getcaptcha .container li .btn-wrapper button {
+        width: 100%;
+        border-radius: 5px;
+        font-size: 1rem; }

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>快递详情</title>
+  </head>
+</html>
+<body class="basicbg page-mail-detail">
+  <header class="topbar"><a href="#" class="fl"><i class="fa fa-angle-left"></i></a><a href="#" class="fr"><i class="fa fa-user"></i></a>
+    <p>快递详情</p>
+    <div class="fr"></div>
+    <div class="clear"></div>
+  </header>
+  <div class="container">
+    <div class="product-img-wrapper"><img src="images/product.jpg" alt="商品图"></div>
+    <div class="product-name whitebg">
+      <div class="amount-wrapper fr"><span class="amount-btn fl"><i class="fa fa-minus"></i></span><span class="amount-btn fr"><i class="fa fa-plus"></i></span>
+        <div class="amount-input-wrapper">
+          <input type="text" max-length="8" class="amount-input">
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="name">一字领印花伞裙</div>
+      <div class="clear"></div>
+    </div>
+    <div class="product-remain whitebg"><span>今日限购剩余：</span><span class="data-remain">44</span></div>
+    <div class="cart-wrapper"><span class="cart-title">购物车总计</span>
+      <div class="cart whitebg"><span>已选：</span><span class="data-choose">1</span><span>份 </span><span>共计：</span><span class="rmbsign">￥</span><span class="data-money">499</span><span>元</span></div>
+    </div>
+    <form action="#">
+      <ul>
+        <li>
+          <label for="name" class="fl">联系人：</label>
+          <input type="text" id="name">
+          <div class="clear"></div>
+        </li>
+        <li>
+          <label for="tel" class="fl">联系电话：</label>
+          <input type="tel" id="tel">
+          <div class="clear"></div>
+        </li>
+        <li class="set-address">
+          <label for="address" class="fl">联系地址：</label>
+          <div class="selects-wrapper">
+            <select class="fl">
+              <option value="" disabled selected style="display:none;">省份</option>
+              <option value="0">北京</option>
+              <option value="1">上海</option>
+              <option value="2">广东</option>
+              <option value="3">天津</option>
+            </select>
+            <select class="fl">
+              <option value="" disabled selected style="display:none;">城市</option>
+              <option value="0">和平区</option>
+              <option value="1">河北区</option>
+              <option value="2">南开区</option>
+            </select>
+            <select class="fl">
+              <option value="" disabled selected style="display:none;">地区</option>
+              <option value="0">xx县</option>
+              <option value="1">xx县</option>
+              <option value="2">xx县</option>
+            </select>
+            <input type="text" id="address">
+          </div>
+          <div class="clear"></div>
+        </li>
+        <li class="set-delivery">
+          <label class="fl">配送方式：</label>
+          <div class="radios-wrapper">
+            <label for="tongcheng">同城送 2元/件</label>
+            <input type="radio" name="delivery" value="0" checked="checked" id="tongcheng">
+            <label for="other">其他快递</label>
+            <input type="radio" name="delivery" value="1" id="other">
+          </div>
+          <div class="clear"></div>
+        </li>
+        <li>
+          <label for="memo" class="fl">备注：</label>
+          <input type="text" id="memo">
+          <div class="clear"></div>
+        </li>
+      </ul>
+    </form>
+    <div class="btn-wrapper">
+      <button type="submit" style="display:block;text-align:center;" class="submit-btn">立即购买</button>
+    </div>
+  </div>
+</body>

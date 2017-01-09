@@ -1,0 +1,88 @@
+@charset "UTF-8";
+@import url(styles.css);
+/* 租车订单详情页 page-orderdetail */
+.page-orderdetail .container .swiper-container {
+  width: 100%; }
+  .page-orderdetail .container .swiper-container .swiper-slide img {
+    width: 100%; }
+  .page-orderdetail .container .swiper-container .swiper-pagination {
+    position: absolute;
+    bottom: 1rem;
+    padding-right: 1rem; }
+    .page-orderdetail .container .swiper-container .swiper-pagination .swiper-pagination-bullet {
+      float: right;
+      width: 2rem;
+      height: .5rem;
+      background: #c8c8c8;
+      border-radius: 1rem; }
+    .page-orderdetail .container .swiper-container .swiper-pagination .swiper-pagination-bullet-active {
+      background: white; }
+
+.page-orderdetail .container li.car-detail {
+  color: #7d7d7d;
+  padding: 0 10px; }
+  .page-orderdetail .container li.car-detail .car-detail-l {
+    width: 200px;
+    padding: 10px 0; }
+    .page-orderdetail .container li.car-detail .car-detail-l .price-per-day {
+      width: 100px; }
+      .page-orderdetail .container li.car-detail .car-detail-l .price-per-day span.rmbsign, .page-orderdetail .container li.car-detail .car-detail-l .price-per-day span.data-price-per-day {
+        font-family: 'Microsoft Yahei', sans-serif;
+        font-weight: bold;
+        color: red;
+        font-size: 1.5rem; }
+    .page-orderdetail .container li.car-detail .car-detail-l .price-per-hour {
+      margin-left: 100px;
+      padding-top: 10px; }
+      .page-orderdetail .container li.car-detail .car-detail-l .price-per-hour span.rmbsign, .page-orderdetail .container li.car-detail .car-detail-l .price-per-hour span.data-price-per-hour {
+        font-family: 'Microsoft Yahei', sans-serif; }
+  .page-orderdetail .container li.car-detail .car-detail-r {
+    width: 100px; }
+    .page-orderdetail .container li.car-detail .car-detail-r .data-car-name {
+      display: block;
+      text-align: right;
+      font-size: .5rem; }
+  .page-orderdetail .container li.car-detail .car-detail-m {
+    margin-left: 200px;
+    margin-right: 100px; }
+
+.page-orderdetail .container li.car-choose-days {
+  border-top: 2px solid #bebebe;
+  border-bottom: 2px solid #bebebe;
+  color: #7d7d7d; }
+  .page-orderdetail .container li.car-choose-days .car-choose-days-placeholder-l, .page-orderdetail .container li.car-choose-days .car-choose-days-placeholder-r {
+    width: 30px; }
+  .page-orderdetail .container li.car-choose-days .car-choose-days-wrapper {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px 0;
+    width: 50%; }
+    .page-orderdetail .container li.car-choose-days .car-choose-days-wrapper label.fl {
+      width: 100px; }
+    .page-orderdetail .container li.car-choose-days .car-choose-days-wrapper span.fr {
+      width: 10px; }
+    .page-orderdetail .container li.car-choose-days .car-choose-days-wrapper .select-wrapper {
+      margin-left: 100px;
+      margin-right: 10px;
+      overflow: hidden;
+      position: relative; }
+      .page-orderdetail .container li.car-choose-days .car-choose-days-wrapper .select-wrapper select {
+        width: 80%;
+        height: 20px;
+        background: transparent;
+        border: 1px solid #bebebe;
+        -webkit-appearance: none;
+        /*for chrome*/ }
+      .page-orderdetail .container li.car-choose-days .car-choose-days-wrapper .select-wrapper:after {
+        position: absolute;
+        top: 30%;
+        right: 15%;
+        content: '';
+        border-color: #7d7d7d;
+        border-width: 10px;
+        border-left-width: 5px;
+        border-right-width: 5px;
+        border-style: solid;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent; }

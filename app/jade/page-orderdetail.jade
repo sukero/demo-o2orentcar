@@ -1,0 +1,60 @@
+doctype
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+    link(rel="stylesheet", href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css")
+    link(href="css/lib/swiper.min.css",rel="stylesheet")
+    link(rel="stylesheet", href="css/index.css")
+    title 订单
+  body.page-orderdetail
+    header.topbar
+      a(href="page-rentcar.html").fl
+        i.fa.fa-angle-left
+      p 订 单
+      div.fr
+      div.clear
+    div.container
+      //- 轮播图
+      div.swiper-container
+        div.swiper-wrapper
+          div.swiper-slide
+            img(src='images/orderdetail-slide-1.png')
+          div.swiper-slide
+            img(src='images/orderdetail-slide-2.png')
+          div.swiper-slide
+            img(src='images/orderdetail-slide-3.png')
+        div.swiper-pagination
+      ul
+        li.car-detail
+          div.car-detail-l.fl
+            div.price-per-day.fl
+              span.rmbsign ￥
+              span.data-price-per-day 260
+              span /天
+            div.price-per-hour
+              span.rmbsign ￥
+              span.data-price-per-hour 35
+              span /时
+            div.clear
+          div.car-detail-r.fr
+            span.data-car-name 斯柯达速派 1.6L 自动挡<br> 330TSI DSG智行版
+          div.car-detail-m
+          div.clear
+        li.car-choose-days
+          div.car-choose-days-placeholder-l.fl
+          div.car-choose-days-placeholder-r.fr   
+          div.car-choose-days-wrapper
+            label.fl(for="choosedays") 选择租赁天数
+            span.fr 天
+            div.select-wrapper
+              select#choosedays
+                option 1
+                option 2
+                option 3
+                option 4
+            div.clear
+          div.clear
+    button(type="button").footer-btn#footer 立即租用
+    script(src="js/lib/swiper.min.js")
+    script(src='js/slider.js')

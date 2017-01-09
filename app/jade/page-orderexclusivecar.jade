@@ -1,0 +1,64 @@
+doctype
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+    link(rel="stylesheet", href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css")
+    link(href="css/lib/swiper.min.css",rel="stylesheet")
+    link(rel="stylesheet", href="css/index.css")
+    title 专车订单页
+  body.page-orderexclusivecar
+    header.topbar
+      a(href="page-ordercar.html").fl
+        i.fa.fa-angle-left
+      p 包车订单
+      div.fr
+      div.clear
+    div.container
+      //- 轮播图
+      div.swiper-container
+        div.swiper-wrapper
+          div.swiper-slide
+            img(src='images/slide-1.png')
+          div.swiper-slide
+            img(src='images/slide-2.png')
+          div.swiper-slide
+            img(src='images/slide-3.png')
+        div.swiper-pagination
+      //- 选择订单分类
+      div.ordersection
+        ul
+          li.div-group
+            div.order-choice.fl
+              a(href='page-ordercontact.html')
+                i.icon-orderexclu-tree1
+                span 接景点
+            div.order-choice.fr
+              a(href='page-ordercontact.html')
+                i.icon-orderexclu-tree2
+                span 送景点
+            div.clear
+          li.div-group
+            div.order-choice.fl
+              a(href='page-ordercontact.html') 
+                i.icon-orderexclu-train1
+                span 接站
+            div.order-choice.fr
+              a(href='page-ordercontact.html') 
+                i.icon-orderexclu-train2
+                span 送站
+            div.clear
+          li.div-group
+            div.order-choice.fl
+              a(href='page-ordercontact.html') 
+                i.icon-orderexclu-plane1
+                span 接机
+            div.order-choice.fr
+              a(href='page-ordercontact.html') 
+                i.icon-orderexclu-plane2
+                span 送机
+            div.clear
+    button(type="button").footer-btn 立即租用
+    script(src="js/lib/swiper.min.js")
+    script(src='js/slider.js')
+      

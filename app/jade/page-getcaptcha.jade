@@ -1,0 +1,30 @@
+doctype
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+    link(rel="stylesheet", href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css")
+    link(rel="stylesheet", href="css/index.css")
+    title 客户填写页
+  body.page-getcaptcha
+    div.container
+      ul
+        li
+          div.enter-tel
+            i.fa.fa-mobile.fl
+            div.input-wrapper
+              input(type="text", placeholder='请输入手机号码')
+            div.clear
+        li
+          div.enter-captcha
+            div.enter-captcha-r.fr
+              button 获取验证码
+            div.enter-captcha-l
+              i.fl.fa.fa-envelope-o
+              div.input-wrapper
+                input(type="text", placeholder='请输入短信验证码')
+              div.clear
+            div.clear
+        li
+          div.btn-wrapper
+            button.submit-btn 提 交

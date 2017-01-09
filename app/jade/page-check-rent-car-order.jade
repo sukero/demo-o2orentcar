@@ -1,0 +1,108 @@
+-var title = '租车订单确认'
+include includes/head.jade
+body.page-check-rent-car-order
+  header.topbar
+    p 租车订单确认
+  section
+    form
+      ul
+        li
+          div.i-wrapper.fl
+            i.fa.fa-mobile
+          div.input-wrapper
+            input(type="tel", placeholder='请输入手机号码')
+          div.clear
+        li.get-captcha-li
+          div.get-captcha-li-r.fr
+            button(type='button') 获取验证码
+          div.get-captcha-li-l
+            div.i-wrapper.fl
+              i.fa.fa-envelope
+            div.input-wrapper
+              input(type="text", placeholder='请输入验证码')
+            div.clear
+          div.clear
+        li.set-time-li
+          div.i-wrapper.fl
+            i.fa.fa-clock-o
+          div.input-wrapper
+            input(type="text", placeholder='请输入开始时间').short-input
+            input(type="text", placeholder='请输入结束时间').short-input
+          div.clear
+        li
+          div.i-wrapper.fl
+            i.fa.fa-map-marker
+          div.input-wrapper
+            input(type="text", placeholder='请输入您需要去往的地址')
+          div.clear
+      textarea(placeholder='如有其他需求，请您填写在此处', cols="30", rows="10")
+    ul.order-details
+      li.big-li
+        a(href="#")
+          div.key.fl
+            span 支付方式
+          div.value.fr
+            label.yellowfont 在线支付
+            input(type="radio", checked='true')
+          div.clear
+      li.big-li
+        a(href="#")
+          div.key.fl
+            span 优惠券
+          div.value.fr
+            i.fa.fa-angle-right.fr
+            span.yellowfont 请选择优惠券
+            div.clear
+          div.clear
+      li.big-li
+        a(href="#")
+          div.key.fl
+            span 积分兑换
+          div.value.fr
+            i.fa.fa-angle-right.fr
+            span.yellowfont 前往兑换
+            div.clear
+          div.clear
+      li.checked-detail
+        ul
+          li.small-li
+            div.key.fl
+              span 服务项目：
+            div.value.fr
+              span 专车接机
+            div.clear
+          li.small-li
+            div.key.fl
+              span 租用天数：
+            div.value.fr
+              span 半天
+            div.clear
+          li.small-li
+            div.key.fl
+              span 租用金额：
+            div.value.fr
+              span 399元
+            div.clear
+  div.footer-with-shadow#footer
+    div.footer-with-shadow-r.fr
+      button(type='submit') 提 交
+    div.footer-with-shadow-l
+      div.discount.fl
+        span 已优惠：
+        span 39元
+      div.price.fr
+        span 还需付：
+        span 360元
+      div.clear
+    div.clear
+  script.
+    var vpH = window.innerHeight;
+    var bodyH = document.body.clientHeight;
+    var footer = document.getElementById('footer');
+
+    if (bodyH > vpH) {
+    footer.style.position = 'relative';
+    } else if (bodyH < vpH) {
+    footer.style.position = 'absolute';
+    footer.style.bottom = '0';
+    }

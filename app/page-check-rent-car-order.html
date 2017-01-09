@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>租车订单确认</title>
+  </head>
+</html>
+<body class="page-check-rent-car-order">
+  <header class="topbar">
+    <p>租车订单确认</p>
+  </header>
+  <section>
+    <form>
+      <ul>
+        <li>
+          <div class="i-wrapper fl"><i class="fa fa-mobile"></i></div>
+          <div class="input-wrapper">
+            <input type="tel" placeholder="请输入手机号码">
+          </div>
+          <div class="clear"></div>
+        </li>
+        <li class="get-captcha-li">
+          <div class="get-captcha-li-r fr">
+            <button type="button">获取验证码</button>
+          </div>
+          <div class="get-captcha-li-l">
+            <div class="i-wrapper fl"><i class="fa fa-envelope"></i></div>
+            <div class="input-wrapper">
+              <input type="text" placeholder="请输入验证码">
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class="clear"></div>
+        </li>
+        <li class="set-time-li">
+          <div class="i-wrapper fl"><i class="fa fa-clock-o"></i></div>
+          <div class="input-wrapper">
+            <input type="text" placeholder="请输入开始时间" class="short-input">
+            <input type="text" placeholder="请输入结束时间" class="short-input">
+          </div>
+          <div class="clear"></div>
+        </li>
+        <li>
+          <div class="i-wrapper fl"><i class="fa fa-map-marker"></i></div>
+          <div class="input-wrapper">
+            <input type="text" placeholder="请输入您需要去往的地址">
+          </div>
+          <div class="clear"></div>
+        </li>
+      </ul>
+      <textarea placeholder="如有其他需求，请您填写在此处" cols="30" rows="10"></textarea>
+    </form>
+    <ul class="order-details">
+      <li class="big-li"><a href="#">
+          <div class="key fl"><span>支付方式</span></div>
+          <div class="value fr">
+            <label class="yellowfont">在线支付</label>
+            <input type="radio" checked="true">
+          </div>
+          <div class="clear"></div></a></li>
+      <li class="big-li"><a href="#">
+          <div class="key fl"><span>优惠券</span></div>
+          <div class="value fr"><i class="fa fa-angle-right fr"></i><span class="yellowfont">请选择优惠券</span>
+            <div class="clear"></div>
+          </div>
+          <div class="clear"></div></a></li>
+      <li class="big-li"><a href="#">
+          <div class="key fl"><span>积分兑换</span></div>
+          <div class="value fr"><i class="fa fa-angle-right fr"></i><span class="yellowfont">前往兑换</span>
+            <div class="clear"></div>
+          </div>
+          <div class="clear"></div></a></li>
+      <li class="checked-detail">
+        <ul>
+          <li class="small-li">
+            <div class="key fl"><span>服务项目：</span></div>
+            <div class="value fr"><span>专车接机</span></div>
+            <div class="clear"></div>
+          </li>
+          <li class="small-li">
+            <div class="key fl"><span>租用天数：</span></div>
+            <div class="value fr"><span>半天</span></div>
+            <div class="clear"></div>
+          </li>
+          <li class="small-li">
+            <div class="key fl"><span>租用金额：</span></div>
+            <div class="value fr"><span>399元</span></div>
+            <div class="clear"></div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+  <div id="footer" class="footer-with-shadow">
+    <div class="footer-with-shadow-r fr">
+      <button type="submit">提 交</button>
+    </div>
+    <div class="footer-with-shadow-l">
+      <div class="discount fl"><span>已优惠：</span><span>39元</span></div>
+      <div class="price fr"><span>还需付：</span><span>360元</span></div>
+      <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <script>
+    var vpH = window.innerHeight;
+    var bodyH = document.body.clientHeight;
+    var footer = document.getElementById('footer');
+    
+    if (bodyH > vpH) {
+    footer.style.position = 'relative';
+    } else if (bodyH < vpH) {
+    footer.style.position = 'absolute';
+    footer.style.bottom = '0';
+    }
+  </script>
+</body>

@@ -1,0 +1,25 @@
+@charset "UTF-8";
+@import url(styles.css);
+/* 我要分享 page-sharedetail */
+.page-sharedetail {
+  font-family: '黑体', 'Microsoft Yahei', sans-serif;
+  background: #e6e6e6; }
+  .page-sharedetail .container {
+    width: 100%; }
+    .page-sharedetail .container .shared-order {
+      margin-top: 2rem;
+      padding: 1rem;
+      width: 100%;
+      background: white;
+      border-bottom: 1px solid black;
+      box-shadow: 0 1px 10px #888; }
+      .page-sharedetail .container .shared-order .shared-order-info span {
+        margin-right: 1rem; }
+        .page-sharedetail .container .shared-order .shared-order-info span:first-child {
+          margin-right: 0; }
+      .page-sharedetail .container .shared-order .shared-order-content {
+        line-height: 2rem; }
+      .page-sharedetail .container .shared-order .shared-order-img {
+        width: 40%; }
+        .page-sharedetail .container .shared-order .shared-order-img img {
+          width: 100%; }

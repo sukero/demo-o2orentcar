@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>个人阅读</title>
+  </head>
+</html>
+<body class="basicbg">
+  <header class="topbar"><a href="#" class="fl"><i class="fa fa-angle-left"></i></a><a href="#" class="fr"><i class="fa fa-user"></i></a>
+    <p>个人阅读</p>
+    <div class="fr"></div>
+    <div class="clear"></div>
+  </header>
+  <div class="container">
+    <ul>
+      <li class="read">
+        <div class="img-wrapper fl">
+          <figure style="background-image:url(images/product.jpg)"></figure>
+        </div>
+        <p class="data-read-content">木棉花(kapok)是南方的特产，是广州市、高雄市以及攀枝花市的市花。五片拥有强劲曲线的花瓣，包围一束绵密的黄色花蕊，收束于紧实的花托，一朵朵都有饭碗那么大，迎着阳春自树顶端向下蔓延。木棉花又称英雄花，连它的坠落也分外的豪气，从树上落下的时候，在空中仍保持原状，一路旋转而下，然后"啪"一声落到地上。树下落英纷陈，花不褪色、不萎靡，很英雄地道别尘世。</p>
+        <div class="clear"></div>
+      </li>
+      <li class="read">
+        <div class="img-wrapper fl">
+          <figure style="background-image:url(images/product.jpg)"></figure>
+        </div>
+        <p class="data-read-content">木棉花(kapok)是__的特产，是广州市、高雄市以及攀枝花市的__。五片拥有强劲曲线的花瓣，包围一束绵密的__花蕊，收束于紧实的花托，一朵朵都有饭碗那么大，迎着阳春自树顶端向下蔓延。木棉花又称___，连它的坠落也分外的豪气，从树上落下的时候，在空中仍保持原状，一路旋转而下，然后"啪"一声落到地上。树下____，花不褪色、不萎靡，很英雄地道别尘世。</p>
+        <div class="clear"></div>
+      </li>
+    </ul>
+    <div class="btn-wrapper">
+      <button type="submit" class="submit-btn">提交</button>
+    </div>
+  </div>
+  <script src="https://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+  <script src="js/showPop.js"></script>
+  <script>
+    $('button').click(function(e){
+      $(this).showPop({
+        'title': {
+          'display': 'none'
+        },
+        'popClsName': 'hint-block-wrapper',
+        'popCtntClsName': 'hint-block',
+        'content': '<p>'+'已获得佣金'+'</p>'
+                    +'<ul>'
+                      +'<li class="fl">'+'<a href="#" class="read-setting">'+'标记为有用'+'</a>'+'</li>'
+                      +'<li class="fl">'+'<a href="#" class="read-setting">'+'查看佣金'+'</a>'+'</li>'
+                      +'<li class="fl">'+'<a href="#" class="read-setting">'+'继续阅读赚钱'+'</a>'+'</li>'
+                      +'<div class="clear">'+'</div>'
+                    +'</ul>'
+      });
+      e.preventDefault();
+    });
+  </script>
+</body>

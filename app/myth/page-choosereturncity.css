@@ -1,0 +1,23 @@
+@charset "UTF-8";
+@import url(styles.css);
+/* 还车城市 page-choosereturncity */
+.page-choosereturncity .container p {
+  margin: 1rem 0;
+  margin-left: .5rem; }
+
+.page-choosereturncity .container .cities {
+  font-size: .5rem; }
+  .page-choosereturncity .container .cities li.citygroup {
+    width: 100%; }
+    .page-choosereturncity .container .cities li.citygroup li.eachcity {
+      width: 20%;
+      height: 50px;
+      padding: 6px 3px; }
+      .page-choosereturncity .container .cities li.citygroup li.eachcity a {
+        display: inline-block;
+        width: 100%;
+        height: 30px;
+        padding: 8px 0;
+        color: black;
+        text-align: center;
+        border: 1px solid #bebebe; }

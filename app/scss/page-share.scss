@@ -1,0 +1,32 @@
+@import "styles.css";
+
+// Variables
+$themecolor: #ffd071;
+$submitbtnbg: #ffc34a;
+$btnbordercolor: #ff8f06;
+$borderlight:#bebebe;
+$bglight: #e6e6e6;
+
+/* 我要分享 page-share */
+.page-share {
+  & .container {
+    font-family: '黑体', 'Microsoft Yahei', sans-serif;
+    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 50px;
+
+    & a.sharelink {
+      display: block;
+      width: 100%;
+      margin-bottom: 20px;
+      padding: 10px 0;
+      border: 1px solid $themecolor;
+    }
+    & a.sharelink:link, & a.sharelink:visited {
+      font-size: 20px;
+      font-weight: bold;
+      color: black;
+    }
+  }
+}

@@ -1,0 +1,171 @@
+@import "styles.css";
+
+// Variables
+$themecolor: #ffd071;
+$submitbtnbg: #ffc34a;
+$btnbordercolor: #ff8f06;
+$borderlight:#bebebe;
+$bglight: #e6e6e6;
+$fontlight: #7d7d7d;
+
+/* 专车订单详情页-立即叫车 page-ordercontact */
+.page-ordercontact {
+  background: $bglight;
+
+    & .container {
+      & form {
+        width: 100%;
+        & li.contact-option {
+          width: 100%;
+          height: 50px;
+          line-height: 50px;
+          margin: 1.5rem 0;
+          background: white;
+
+          & i {
+            color: $themecolor;
+          }
+        }
+        & .contact-tel {
+          & .contact-info {
+            width: 100px;
+            & i {
+              font-size: 1.5rem;
+              padding-left: 20px;
+            }
+            & span {
+              padding-right: 20px;
+            }
+          }
+          & .span-r {
+            width: 80px;
+            color: $borderlight;
+            border-left: 2px solid $borderlight;
+            text-align: center;
+          }
+          & .contact-input {
+            margin-left: 100px;
+            margin-right: 80px;
+            padding-right: 10px;
+            & input {
+              width: 100%;
+              height: 40px;
+              font-size: 1rem;
+              border: 1px solid $borderlight;
+            }
+          }
+        }
+        & .contact-start {
+          & .contact-info {
+            width: 100px;
+            & i {
+              font-size: 1.5rem;
+              padding-left: 20px;
+            }
+            & span {
+              padding-right: 20px;
+            }
+          }
+          & .span-r {
+            width: 80px;
+            color: $borderlight;
+            border-left: 2px solid $borderlight;
+            text-align: center;
+          }
+          & .contact-input {
+            margin-left: 100px;
+            margin-right: 80px;
+            padding-right: 10px;
+            & input {
+              width: 100%;
+              height: 40px;
+              font-size: 1rem;
+              border: 1px solid $borderlight;
+            }
+          }
+        }
+        & .contact-category {
+          & li {
+            width: 33.3%;
+            border-left: 2px solid $borderlight;
+            text-align: center;
+
+            &:first-child {
+              border-left: 0;
+            }
+            & .contact-category-radio-wrapper {
+              width: 24px;
+              height: 18px;
+              padding-top: 2px;
+              padding-left: 2px;
+              text-align: center;
+              margin-right: 10px;
+              background-image: url('../images/icon-radio.gif');
+              background-repeat: no-repeat;
+              background-position: -24px 0;
+
+              & input[type='radio'] {
+                opacity: 0;
+              }
+            }
+            & .on {
+              background-position: 0 0;
+            }
+          }
+        }
+        & .contact-coupon {
+
+            & i.icon-mycoupon {
+              display: inline-block;
+              width: 40px;
+              height: 20px;
+              margin-top: 15px;
+              margin-right: 15px;
+              padding: 10px 0;
+              background: url('../images/icon-mycoupon-ordercontact.png') center no-repeat;
+              background-size: cover;
+            }
+
+          & .contact-coupon-l {
+            margin-right: 150px;
+            padding-left: 20px;
+            color: black;
+          }
+          & .contact-coupon-r {
+            width: 150px;
+            height: 100%;
+            color: $borderlight;
+            & i {
+              color: $borderlight;
+              font-size: 2rem;
+              padding: 10px;
+            }
+          }
+        }
+      }
+    }
+    & .footerbar {
+      position: absolute;
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      bottom: 0;
+      background: white;
+      & .footerbar-l {
+        float: left;
+        margin-left: 10%;
+      }
+      & .footerbar-r {
+        float: right;
+        width: 40%;
+
+        & button {
+          width: 80%;
+          height: 2rem;
+          font-size: 1rem;
+          padding: 0;
+        }
+      }
+    }
+
+}

@@ -1,0 +1,46 @@
+@import "styles.css";
+
+// Variables
+$themecolor: #ffd071;
+$submitbtnbg: #ffc34a;
+$btnbordercolor: #ff8f06;
+$borderlight:#bebebe;
+$bglight: #e6e6e6;
+
+/* 我要分享 page-sharedetail */
+.page-sharedetail {
+	font-family: '黑体', 'Microsoft Yahei', sans-serif;
+	background: $bglight;
+
+  & .container {
+    width: 100%;
+
+    & .shared-order {
+      margin-top: 2rem;
+      padding: 1rem;
+      width: 100%;
+      background: white;
+      border-bottom: 1px solid black;
+      box-shadow: 0 1px 10px #888;
+
+      &  .shared-order-info {
+        & span {
+          margin-right: 1rem;
+
+          &:first-child {
+            margin-right: 0;
+          }
+        }
+      }
+      & .shared-order-content {
+        line-height: 2rem;
+      }
+      & .shared-order-img {
+        width: 40%;
+        & img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

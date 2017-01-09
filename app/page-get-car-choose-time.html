@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>包车订单时间选择页面</title>
+  </head>
+</html>
+<body class="page-get-car-choose-time">
+  <header class="topbar">
+    <p>选择包车时间</p>
+  </header>
+  <section>
+    <ul class="choose-time">
+      <li class="big-li">
+        <ul>
+          <li>
+            <div class="key fl"><span>用车城市</span></div>
+            <div class="value">
+              <input type="text" placeholder="请输入城市">
+            </div>
+            <div class="clear"></div>
+          </li>
+          <li>
+            <div class="key fl"><span>上车地点</span></div>
+            <div class="value">
+              <input type="text" placeholder="请选择出发地点">
+            </div>
+            <div class="clear"></div>
+          </li>
+        </ul>
+      </li>
+      <li class="big-li">
+        <ul>
+          <li>
+            <div class="key fl"><span>上车时间</span></div>
+            <div id="enter-time" class="value">
+              <input type="text" placeholder="请输入用车时间">
+            </div>
+            <div class="clear"></div>
+          </li>
+          <li>
+            <div class="key fl"><span>用车时长</span></div>
+            <div class="value">
+              <input type="radio" name="use-car-time">
+              <label>半天</label>
+              <input type="radio" name="use-car-time">
+              <label>一天</label>
+              <input type="radio" name="use-car-time">
+              <label>2h</label>
+            </div>
+            <div class="clear"></div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="choose-type">
+      <li style="display:inline-block;" class="choose-type-group">
+        <ul>
+          <li class="choose-type-on fl">
+            <div class="round-icon-wrapper"><i class="icon-jieji"></i>
+              <p>接机</p>
+            </div><span>￥360</span>
+          </li>
+          <li class="fl">
+            <div class="round-icon-wrapper"><i class="icon-jiezhan"></i>
+              <p>接站</p>
+            </div><span>￥360</span>
+          </li>
+          <li class="fl">
+            <div class="round-icon-wrapper"><i class="icon-jingdian"></i>
+              <p>接送景点</p>
+            </div><span>￥360</span>
+          </li>
+          <div class="clear"></div>
+        </ul>
+      </li>
+      <li style="display:inline-block;" class="choose-type-group">
+        <ul>
+          <li class="fl">
+            <div class="round-icon-wrapper"><i class="icon-songji"></i>
+              <p>送机</p>
+            </div><span>￥360</span>
+          </li>
+          <li class="fl">
+            <div class="round-icon-wrapper"><i class="icon-songzhan"></i>
+              <p>送站</p>
+            </div><span>￥360</span>
+          </li>
+          <li class="fl">
+            <div class="round-icon-wrapper"><i class="icon-shangche"></i>
+              <p>上车再说</p>
+            </div><span>￥360</span>
+          </li>
+          <div class="clear"></div>
+        </ul>
+      </li>
+    </ul>
+  </section>
+  <div style="display:none;" class="pop-container">
+    <div class="pop-content">
+      <div class="pop-title"><i class="fa fa-close close fr"></i>
+        <p>2016年</p>
+      </div>
+      <div class="pop-main">
+        <ul>
+          <li class="fl">
+            <div class="plus"><i class="fa fa-plus"></i></div>
+            <div class="input-wrapper"><span class="fr">月</span>
+              <input type="text">
+              <div class="clear"></div>
+            </div>
+            <div class="minus"><i class="fa fa-minus"></i></div>
+          </li>
+          <li class="fl">
+            <div class="plus"><i class="fa fa-plus"></i></div>
+            <div class="input-wrapper"><span class="fr">日</span>
+              <input type="text">
+              <div class="clear"></div>
+            </div>
+            <div class="minus"><i class="fa fa-minus"></i></div>
+          </li>
+          <li class="fl">
+            <div class="plus"><i class="fa fa-plus"></i></div>
+            <div class="input-wrapper"><span class="fr">时</span>
+              <input type="text">
+              <div class="clear"></div>
+            </div>
+            <div class="minus"><i class="fa fa-minus"></i></div>
+          </li>
+          <li class="fl">
+            <div class="plus"><i class="fa fa-plus"></i></div>
+            <div class="input-wrapper"><span class="fr">分</span>
+              <input type="text">
+              <div class="clear"></div>
+            </div>
+            <div class="minus"><i class="fa fa-minus"></i></div>
+          </li>
+          <div class="clear"></div>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+  <script src="js/lib/jquery.blockUI.js"></script>
+  <script>
+    $('#enter-time').click(function () {
+      $.blockUI({
+        message: $('.pop-container'),
+        css: {
+          border: 'none',
+          width: '80%',
+          left: '10%'
+        }
+      });
+      $('.close').click($.unblockUI);
+    });
+  </script>
+</body>

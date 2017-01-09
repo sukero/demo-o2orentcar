@@ -1,0 +1,96 @@
+@import "styles.css";
+
+// Variables
+$themecolor: #ffd071;
+$submitbtnbg: #ffc34a;
+$btnbordercolor: #ff8f06;
+$borderlight:#bebebe;
+$bglight: #e6e6e6;
+
+/* 客户填写页 page-getcaptcha */
+.page-getcaptcha {
+  & .container {
+    padding-top: 100px;
+    & li {
+      width: 100%;
+      padding: 7px 30px;
+      &:last-child {
+        margin-top: 100px;
+      }
+      & .enter-tel, & .enter-captcha-l {
+        padding: 3px 0;
+        border: 1px solid $btnbordercolor;
+      }
+      & .enter-tel {
+        & i {
+          display: block;
+          width: 30px;
+          font-size: 2rem;
+          padding: 3px 6px;
+          color: $btnbordercolor;
+          border-right: 1px solid $borderlight;
+        }
+        & .input-wrapper {
+          margin-left: 35px;
+          height: 40px;
+          padding: 5px 0;
+          padding-left: 5px;
+          & input {
+            height: 30px;
+            font-size: 1rem;
+          }
+        }
+      }
+      & .enter-captcha {
+        width: 100%;
+        padding: 3px 0;
+
+        & .enter-captcha-l {
+          margin-right: 110px;
+          & i {
+            display: block;
+            width: 30px;
+            font-size: 1.2rem;
+            color: $btnbordercolor;
+            padding: 10px 5px;
+            border-right: 1px solid $borderlight;
+          }
+          & .input-wrapper {
+            margin-left: 35px;
+            height: 40px;
+            padding: 5px 0;
+            padding-left: 5px;
+            & input {
+              width: 90%;
+              margin: 0 auto;
+              height: 30px;
+              font-size: 1rem;
+            }
+          }
+        }
+        & .enter-captcha-r {
+          width: 100px;
+          padding: 3px 0;
+
+          & button {
+            width: 100%;
+            padding: 10px;
+            color: white;
+            background: $submitbtnbg;
+            border: 1px solid $btnbordercolor;
+            border-radius: 5px;
+          }
+        }
+      }
+      & .btn-wrapper {
+        width: 100%;
+        padding: 0 80px;
+        & button {
+          width: 100%;
+          border-radius: 5px;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

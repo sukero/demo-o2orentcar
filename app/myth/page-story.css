@@ -1,0 +1,47 @@
+@charset "UTF-8";
+@import url(styles.css);
+/* 图文内容页-客户撰写 page-story */
+.page-story header {
+  position: relative; }
+  .page-story header i {
+    position: absolute;
+    color: white;
+    top: 5%; }
+  .page-story header i.fa-angle-left {
+    left: 5%;
+    font-size: 2rem; }
+  .page-story header i.icon-story-header-share {
+    background: url("../images/icon-story-header-share.png") no-repeat;
+    background-size: contain;
+    right: 5%;
+    width: 2rem;
+    height: 2rem; }
+  .page-story header img {
+    width: 100%; }
+
+.page-story .container {
+  width: 100%; }
+  .page-story .container .essay-wrapper {
+    padding-top: 2rem; }
+    .page-story .container .essay-wrapper h2 {
+      width: 90%;
+      margin: 0 auto;
+      font-family: 'Microsoft Yahei', sans-serif; }
+    .page-story .container .essay-wrapper .essay-pageviews {
+      width: 90%;
+      margin: 0 auto;
+      line-height: 2rem;
+      color: #7d7d7d; }
+    .page-story .container .essay-wrapper .essay-content .essay-content-writing {
+      padding: 1rem 0;
+      width: 90%;
+      margin: 0 auto; }
+      .page-story .container .essay-wrapper .essay-content .essay-content-writing p {
+        line-height: 1.5rem;
+        text-indent: 2rem; }
+    .page-story .container .essay-wrapper .essay-content img {
+      width: 100%; }
+    .page-story .container .essay-wrapper .essay-content .essay-content-about {
+      padding: 4rem 1rem 4rem 0;
+      line-height: 2rem;
+      text-align: right; }

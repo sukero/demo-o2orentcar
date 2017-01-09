@@ -1,0 +1,72 @@
+@charset "UTF-8";
+@import url(styles.css);
+/* 我的评论页 page-mycomment */
+.page-mycomment .container {
+  font-family: '黑体', 'Microsoft Yahei', sans-serif;
+  width: 100%;
+  background: #e6e6e6; }
+  .page-mycomment .container .comment {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: white; }
+    .page-mycomment .container .comment .titlename {
+      font-size: 1.2rem;
+      color: #ffd071; }
+    .page-mycomment .container .comment .detail {
+      margin-top: 1rem;
+      line-height: 1.2rem;
+      color: #7d7d7d; }
+    .page-mycomment .container .comment .info {
+      margin-top: 1rem;
+      color: #7d7d7d; }
+      .page-mycomment .container .comment .info .state {
+        width: 50px;
+        color: red; }
+      .page-mycomment .container .comment .info .time {
+        margin-right: 50px; }
+    .page-mycomment .container .comment .star-wrapper {
+      margin: 1rem 0; }
+      .page-mycomment .container .comment .star-wrapper .star-bg {
+        width: 100%; }
+    .page-mycomment .container .comment .entercomment {
+      height: 150px;
+      padding: 0 10px;
+      text-align: center; }
+      .page-mycomment .container .comment .entercomment #entercomment {
+        padding: 5px;
+        width: 100%;
+        height: 100%;
+        border: 1px solid #ffd071;
+        border-radius: 5px; }
+    .page-mycomment .container .comment .uploadphotos {
+      margin-top: 1rem;
+      padding: 0 10px;
+      color: #ffd071; }
+      .page-mycomment .container .comment .uploadphotos .uploadphotos-wrapper {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center; }
+      .page-mycomment .container .comment .uploadphotos .uploadphotos-btn-wrapper {
+        position: relative;
+        margin-left: 5px; }
+      .page-mycomment .container .comment .uploadphotos input[type='button'] {
+        background: url("../images/icon-camera.gif") no-repeat;
+        background-position: 50%;
+        width: 2rem;
+        height: 2rem;
+        border: 1px solid #ffd071;
+        border-radius: 5px; }
+      .page-mycomment .container .comment .uploadphotos input[type='file'] {
+        position: absolute;
+        opacity: 0;
+        width: 100%;
+        height: 100%; }
+  .page-mycomment .container .btn-wrapper {
+    margin-top: 1rem;
+    padding: 0 60px; }
+    .page-mycomment .container .btn-wrapper button {
+      width: 100%;
+      border-radius: 5px;
+      font-size: 1rem; }

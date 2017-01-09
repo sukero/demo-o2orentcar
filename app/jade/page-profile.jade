@@ -1,0 +1,42 @@
+doctype
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+    link(rel="stylesheet", href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css")
+    link(rel="stylesheet", href="css/index.css")
+    title 个人中心
+  body.page-profile
+    header.topbar
+      p 个人中心
+    div.container
+      div.user
+        div.user-avatar
+          img(src="images/user-avatar.gif")
+        p.username 子丶漠
+      div.profile-settings
+        ul
+          li
+            a(href="page-myorders.html").profile-setting
+              i.icon-myorder.icon.fl
+              span 我的订单
+              i.fa.fa-angle-right.fr
+              div.clear
+          li
+            a(href="page-mycoupons.html").profile-setting
+              i.icon-mycoupon.icon.fl
+              span 我的优惠券
+              i.fa.fa-angle-right.fr
+              div.clear
+          li
+            a(href="page-myscore.html").profile-setting
+              i.icon-myscore.icon.fl
+              span 我的积分
+              i.fa.fa-angle-right.fr
+              div.clear
+          li
+            a(href="page-mycomment.html").profile-setting
+              i.icon-mycomment.icon.fl
+              span 我的评论
+              i.fa.fa-angle-right.fr
+              div.clear

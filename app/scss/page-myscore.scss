@@ -1,0 +1,37 @@
+@import "styles.css";
+
+// Variables
+$themecolor: #ffd071;
+$submitbtnbg: #ffc34a;
+$btnbordercolor: #ff8f06;
+$borderlight:#bebebe;
+$bglight: #e6e6e6;
+
+/* 我的积分页 page-myscore */
+.page-myscore {
+  & .container {
+    font-family: '黑体', 'Microsoft Yahei', sans-serif;
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 50px;
+
+    & .user-avatar {
+      & img {
+        width: 60%;
+        border: 2px solid $themecolor;
+        border-radius: 50%;
+      }
+    }
+    & .username {
+      margin-bottom: 50px;
+    }
+    & .totalscore .showscore {
+      color: red;
+    }
+    & button {
+      width: 100%;
+      margin-top: 90px;
+    }
+  }
+}

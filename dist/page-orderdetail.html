@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link href="css/lib/swiper.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <title>订单</title>
+  </head>
+  <body class="page-orderdetail">
+    <header class="topbar"><a href="page-rentcar.html" class="fl"><i class="fa fa-angle-left"></i></a>
+      <p>订 单</p>
+      <div class="fr"></div>
+      <div class="clear"></div>
+    </header>
+    <div class="container">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="images/orderdetail-slide-1.png"></div>
+          <div class="swiper-slide"><img src="images/orderdetail-slide-2.png"></div>
+          <div class="swiper-slide"><img src="images/orderdetail-slide-3.png"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <ul>
+        <li class="car-detail">
+          <div class="car-detail-l fl">
+            <div class="price-per-day fl"><span class="rmbsign">￥</span><span class="data-price-per-day">260</span><span>/天</span></div>
+            <div class="price-per-hour"><span class="rmbsign">￥</span><span class="data-price-per-hour">35</span><span>/时</span></div>
+            <div class="clear"></div>
+          </div>
+          <div class="car-detail-r fr"><span class="data-car-name">斯柯达速派 1.6L 自动挡<br> 330TSI DSG智行版</span></div>
+          <div class="car-detail-m"></div>
+          <div class="clear"></div>
+        </li>
+        <li class="car-choose-days">
+          <div class="car-choose-days-placeholder-l fl"></div>
+          <div class="car-choose-days-placeholder-r fr">  </div>
+          <div class="car-choose-days-wrapper">
+            <label for="choosedays" class="fl">选择租赁天数</label><span class="fr">天</span>
+            <div class="select-wrapper">
+              <select id="choosedays">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class="clear"></div>
+        </li>
+      </ul>
+    </div>
+    <button type="button" id="footer" class="footer-btn">立即租用</button>
+    <script src="js/lib/swiper.min.js"></script>
+    <script src="js/slider.js"></script>
+  </body>
+</html>

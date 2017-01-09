@@ -1,0 +1,22 @@
+doctype
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+    link(rel="stylesheet", href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css")
+    link(rel="stylesheet", href="css/index.css")
+    title 我要分享页
+  body.page-share
+    header.topbar
+      p 我要分享
+    div.container
+      -var linknames = ['我在青海', '我在海南', '我在云南', '我要分享']
+      ul
+        li
+          a.sharelink(href='#') 我在青海
+        li
+          a.sharelink(href='#') 我在海南
+        li
+          a.sharelink(href='#') 我在云南
+        li
+          a.sharelink(href='page-sharedetail.html') 我要分享

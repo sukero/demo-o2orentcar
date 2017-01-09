@@ -1,0 +1,64 @@
+@charset "UTF-8";
+@import url(styles.css);
+/* 专车订单页 page-orderexclusivecar */
+.page-orderexclusivecar .container {
+  width: 100%; }
+  .page-orderexclusivecar .container .swiper-container {
+    width: 100%; }
+    .page-orderexclusivecar .container .swiper-container .swiper-slide img {
+      width: 100%; }
+    .page-orderexclusivecar .container .swiper-container .swiper-pagination {
+      position: absolute;
+      bottom: 2rem;
+      padding-right: 1rem; }
+      .page-orderexclusivecar .container .swiper-container .swiper-pagination .swiper-pagination-bullet {
+        float: right;
+        width: 2rem;
+        height: .5rem;
+        background: #c8c8c8;
+        border-radius: 1rem; }
+      .page-orderexclusivecar .container .swiper-container .swiper-pagination .swiper-pagination-bullet-active {
+        background: white; }
+  .page-orderexclusivecar .container .ordersection {
+    width: 100%; }
+    .page-orderexclusivecar .container .ordersection a {
+      color: black; }
+    .page-orderexclusivecar .container .ordersection ul {
+      margin-top: 2rem;
+      padding: 0 50px; }
+      .page-orderexclusivecar .container .ordersection ul li.div-group {
+        width: 100%;
+        margin-bottom: 1rem; }
+      .page-orderexclusivecar .container .ordersection ul div.order-choice {
+        width: 40%;
+        border: 1px solid #ffd071;
+        border-radius: .5rem;
+        text-align: center; }
+        .page-orderexclusivecar .container .ordersection ul div.order-choice a {
+          display: block;
+          width: 100%;
+          height: 100%; }
+          .page-orderexclusivecar .container .ordersection ul div.order-choice a i {
+            display: inline-block;
+            width: 2.5rem;
+            height: 2.5rem; }
+          .page-orderexclusivecar .container .ordersection ul div.order-choice a span {
+            display: block; }
+        .page-orderexclusivecar .container .ordersection ul div.order-choice i.icon-orderexclu-tree1 {
+          background: url("../images/icon-orderexclucar-tree1.jpg") no-repeat;
+          background: cover; }
+        .page-orderexclusivecar .container .ordersection ul div.order-choice i.icon-orderexclu-tree2 {
+          background: url("../images/icon-orderexclucar-tree2.jpg") no-repeat;
+          background: cover; }
+        .page-orderexclusivecar .container .ordersection ul div.order-choice i.icon-orderexclu-train1 {
+          background: url("../images/icon-orderexclucar-train1.jpg") no-repeat;
+          background: cover; }
+        .page-orderexclusivecar .container .ordersection ul div.order-choice i.icon-orderexclu-train2 {
+          background: url("../images/icon-orderexclucar-train2.jpg") no-repeat;
+          background: cover; }
+        .page-orderexclusivecar .container .ordersection ul div.order-choice i.icon-orderexclu-plane1 {
+          background: url("../images/icon-orderexclucar-plane1.jpg") no-repeat;
+          background: cover; }
+        .page-orderexclusivecar .container .ordersection ul div.order-choice i.icon-orderexclu-plane2 {
+          background: url("../images/icon-orderexclucar-plane2.jpg") no-repeat;
+          background: cover; }

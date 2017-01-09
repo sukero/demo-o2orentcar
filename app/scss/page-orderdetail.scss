@@ -1,0 +1,129 @@
+@import "styles.css";
+
+// Variables
+$themecolor: #ffd071;
+$submitbtnbg: #ffc34a;
+$btnbordercolor: #ff8f06;
+$borderlight:#bebebe;
+$bglight: #e6e6e6;
+$fontlight: #7d7d7d;
+
+/* 租车订单详情页 page-orderdetail */
+.page-orderdetail {
+
+  & .container {
+    & .swiper-container {
+      width: 100%;
+
+      & .swiper-slide {
+        & img {
+          width: 100%;
+        }
+      }
+      & .swiper-pagination {
+        position: absolute;
+        bottom: 1rem;
+        padding-right: 1rem;
+        & .swiper-pagination-bullet {
+          float: right;
+          width: 2rem;
+          height: .5rem;
+          background: #c8c8c8;
+          border-radius: 1rem;
+        }
+        & .swiper-pagination-bullet-active {
+          background: white;
+        }
+      }
+    }
+    & li.car-detail {
+      color: $fontlight;
+      padding: 0 10px;
+      & .car-detail-l {
+        width: 200px;
+        padding: 10px 0;
+        & .price-per-day {
+          width: 100px;
+          & span.rmbsign, & span.data-price-per-day {
+            font-family: 'Microsoft Yahei', sans-serif;
+            font-weight: bold;
+            color: red;
+            font-size: 1.5rem;
+          }
+        }
+        & .price-per-hour {
+          margin-left: 100px;
+          padding-top: 10px;
+          & span.rmbsign, & span.data-price-per-hour {
+            font-family: 'Microsoft Yahei', sans-serif;
+          }
+        }
+      }
+      & .car-detail-r {
+        width: 100px;
+
+        & .data-car-name {
+          display: block;
+          text-align: right;
+          font-size: .5rem;
+        }
+      }
+      & .car-detail-m {
+        margin-left: 200px;
+        margin-right: 100px;
+      }
+    }
+    & li.car-choose-days {
+      border-top: 2px solid $borderlight;
+      border-bottom: 2px solid $borderlight;
+      color: $fontlight;
+
+      & .car-choose-days-placeholder-l, & .car-choose-days-placeholder-r {
+        width: 30px;
+      }
+      & .car-choose-days-wrapper {
+        text-align: center;
+        margin: 0 auto;
+        padding: 20px 0;
+        width: 50%;
+
+        & label.fl{
+          width: 100px;
+        }
+        & span.fr {
+          width: 10px;
+        }
+
+        & .select-wrapper {
+          margin-left: 100px;
+          margin-right: 10px;
+          overflow: hidden;
+          position: relative;
+
+          & select {
+            width: 80%;
+            height: 20px;
+            background: transparent;
+            border: 1px solid $borderlight;
+            -webkit-appearance: none; /*for chrome*/
+          }
+          // 下拉菜单的三角形
+          &:after {
+            position: absolute;
+            top: 30%;
+            right: 15%;
+            content: '';
+            border-color: $fontlight;
+            border-width: 10px;
+            border-left-width: 5px;
+            border-right-width: 5px;
+            border-style: solid;
+            border-left-color: transparent;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+          }
+        }
+      }
+    }
+  }
+}

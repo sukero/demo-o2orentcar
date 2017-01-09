@@ -1,0 +1,116 @@
+@charset "UTF-8";
+@import url(styles.css);
+/* 专车订单详情页-立即叫车 page-ordercontact */
+.page-ordercontact {
+  background: #e6e6e6; }
+  .page-ordercontact .container form {
+    width: 100%; }
+    .page-ordercontact .container form li.contact-option {
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      margin: 1.5rem 0;
+      background: white; }
+      .page-ordercontact .container form li.contact-option i {
+        color: #ffd071; }
+    .page-ordercontact .container form .contact-tel .contact-info {
+      width: 100px; }
+      .page-ordercontact .container form .contact-tel .contact-info i {
+        font-size: 1.5rem;
+        padding-left: 20px; }
+      .page-ordercontact .container form .contact-tel .contact-info span {
+        padding-right: 20px; }
+    .page-ordercontact .container form .contact-tel .span-r {
+      width: 80px;
+      color: #bebebe;
+      border-left: 2px solid #bebebe;
+      text-align: center; }
+    .page-ordercontact .container form .contact-tel .contact-input {
+      margin-left: 100px;
+      margin-right: 80px;
+      padding-right: 10px; }
+      .page-ordercontact .container form .contact-tel .contact-input input {
+        width: 100%;
+        height: 40px;
+        font-size: 1rem;
+        border: 1px solid #bebebe; }
+    .page-ordercontact .container form .contact-start .contact-info {
+      width: 100px; }
+      .page-ordercontact .container form .contact-start .contact-info i {
+        font-size: 1.5rem;
+        padding-left: 20px; }
+      .page-ordercontact .container form .contact-start .contact-info span {
+        padding-right: 20px; }
+    .page-ordercontact .container form .contact-start .span-r {
+      width: 80px;
+      color: #bebebe;
+      border-left: 2px solid #bebebe;
+      text-align: center; }
+    .page-ordercontact .container form .contact-start .contact-input {
+      margin-left: 100px;
+      margin-right: 80px;
+      padding-right: 10px; }
+      .page-ordercontact .container form .contact-start .contact-input input {
+        width: 100%;
+        height: 40px;
+        font-size: 1rem;
+        border: 1px solid #bebebe; }
+    .page-ordercontact .container form .contact-category li {
+      width: 33.3%;
+      border-left: 2px solid #bebebe;
+      text-align: center; }
+      .page-ordercontact .container form .contact-category li:first-child {
+        border-left: 0; }
+      .page-ordercontact .container form .contact-category li .contact-category-radio-wrapper {
+        width: 24px;
+        height: 18px;
+        padding-top: 2px;
+        padding-left: 2px;
+        text-align: center;
+        margin-right: 10px;
+        background-image: url("../images/icon-radio.gif");
+        background-repeat: no-repeat;
+        background-position: -24px 0; }
+        .page-ordercontact .container form .contact-category li .contact-category-radio-wrapper input[type='radio'] {
+          opacity: 0; }
+      .page-ordercontact .container form .contact-category li .on {
+        background-position: 0 0; }
+    .page-ordercontact .container form .contact-coupon i.icon-mycoupon {
+      display: inline-block;
+      width: 40px;
+      height: 20px;
+      margin-top: 15px;
+      margin-right: 15px;
+      padding: 10px 0;
+      background: url("../images/icon-mycoupon-ordercontact.png") center no-repeat;
+      background-size: cover; }
+    .page-ordercontact .container form .contact-coupon .contact-coupon-l {
+      margin-right: 150px;
+      padding-left: 20px;
+      color: black; }
+    .page-ordercontact .container form .contact-coupon .contact-coupon-r {
+      width: 150px;
+      height: 100%;
+      color: #bebebe; }
+      .page-ordercontact .container form .contact-coupon .contact-coupon-r i {
+        color: #bebebe;
+        font-size: 2rem;
+        padding: 10px; }
+  .page-ordercontact .footerbar {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    bottom: 0;
+    background: white; }
+    .page-ordercontact .footerbar .footerbar-l {
+      float: left;
+      margin-left: 10%; }
+    .page-ordercontact .footerbar .footerbar-r {
+      float: right;
+      width: 40%; }
+      .page-ordercontact .footerbar .footerbar-r button {
+        width: 80%;
+        height: 2rem;
+        font-size: 1rem;
+        padding: 0; }

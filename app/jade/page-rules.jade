@@ -1,0 +1,34 @@
+-var title = '规则页面'
+include includes/head.jade
+body.page-rules
+  section
+    p.main-title 价格规则
+    p.yellowfont ￥587
+    div.price-wrapper
+      p.fl 起步费
+      p.fr ￥587
+      div.clear
+    div.price-rules
+      p 计费规则
+      p 价格有系统计算，并未参考堵车，封路，天气，等实际因素。不包含停车费，高速费等司机垫付费用，具体费用以车辆实际行驶情况为准。
+    ul
+      li
+        p.title 温馨提示
+        p 发票可以在下单之后，到订单详情页中索取<br>当您选择的车型无人接单时，我们会为您派发其他车型。
+      li
+        p.title 取消规则
+        p 发票可以在下单之后，到订单详情页中索取
+  div.footer-with-shadow#footer
+    div.i-wrapper
+      i.fa.fa-times-circle-o
+  script.
+    var vpH = window.innerHeight;
+    var bodyH = document.body.clientHeight;
+    var footer = document.getElementById('footer');
+
+    if (bodyH > vpH) {
+    footer.style.position = 'relative';
+    } else if (bodyH < vpH) {
+    footer.style.position = 'absolute';
+    footer.style.bottom = '0';
+    }

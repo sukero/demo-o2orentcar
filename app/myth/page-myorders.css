@@ -1,0 +1,36 @@
+@charset "UTF-8";
+@import url(styles.css);
+/* 我的订单 page-myorders */
+.page-myorders {
+  font-family: '黑体', 'Microsoft Yahei', sans-serif;
+  background: #e6e6e6; }
+  .page-myorders .container {
+    width: 100%;
+    height: 100%;
+    padding-top: .3rem; }
+    .page-myorders .container .order {
+      padding: 1rem;
+      width: 100%;
+      height: auto;
+      margin: 2rem 0;
+      font-size: .8rem;
+      background: white; }
+      .page-myorders .container .order .order-wrapper .title {
+        color: #ffd071;
+        font-size: 1.2rem; }
+      .page-myorders .container .order .order-wrapper .info, .page-myorders .container .order .order-wrapper .status, .page-myorders .container .order .order-wrapper .comment {
+        color: #7d7d7d;
+        margin-top: 10px; }
+      .page-myorders .container .order .order-wrapper .status .state {
+        width: 100px;
+        color: red;
+        text-align: right; }
+      .page-myorders .container .order .order-wrapper .status .time {
+        margin-right: 100px; }
+        .page-myorders .container .order .order-wrapper .status .time span:first-child {
+          width: 70px; }
+      .page-myorders .container .order .order-wrapper .commentphotos li {
+        margin-right: 10px;
+        width: 10%; }
+        .page-myorders .container .order .order-wrapper .commentphotos li img {
+          width: 100%; }

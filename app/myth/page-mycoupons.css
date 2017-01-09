@@ -1,0 +1,81 @@
+@charset "UTF-8";
+@import url(styles.css);
+/* 我的优惠券页 page-mycoupons */
+.page-mycoupons {
+  font-family: '黑体', 'Microsoft Yahei', sans-serif;
+  background: #e6e6e6; }
+  .page-mycoupons .container .title {
+    position: relative;
+    width: 100%;
+    height: 1.5rem;
+    text-align: center;
+    border-bottom: 1px dashed black; }
+    .page-mycoupons .container .title span {
+      position: absolute;
+      display: block;
+      width: 20%;
+      left: 40%;
+      bottom: -35%;
+      background: #e6e6e6; }
+  .page-mycoupons .container .coupons {
+    margin-top: 2rem; }
+    .page-mycoupons .container .coupons .coupon {
+      margin-bottom: 2rem;
+      padding: 0 1rem;
+      height: 100px; }
+      .page-mycoupons .container .coupons .coupon .coupon-wrapper {
+        background: white;
+        box-shadow: 5px 5px 10px #888; }
+        .page-mycoupons .container .coupons .coupon .coupon-wrapper .coupon-wrapper-l {
+          width: 100px;
+          padding: 10px;
+          background: url("../images/coupon-line.png") no-repeat;
+          background-size: contain;
+          color: #ffd071;
+          text-align: center;
+          border-right: 1px dashed black; }
+          .page-mycoupons .container .coupons .coupon .coupon-wrapper .coupon-wrapper-l .coupon-price {
+            margin-top: 10%; }
+            .page-mycoupons .container .coupons .coupon .coupon-wrapper .coupon-wrapper-l .coupon-price .data-coupon-price {
+              font-size: 3rem; }
+        .page-mycoupons .container .coupons .coupon .coupon-wrapper .coupon-wrapper-r {
+          margin-left: 100px; }
+          .page-mycoupons .container .coupons .coupon .coupon-wrapper .coupon-wrapper-r .coupon-wrapper-r-title {
+            position: relative;
+            padding-top: .2rem;
+            padding-left: 1rem; }
+            .page-mycoupons .container .coupons .coupon .coupon-wrapper .coupon-wrapper-r .coupon-wrapper-r-title .coupon-title {
+              font-size: 1rem;
+              color: #ffd071; }
+            .page-mycoupons .container .coupons .coupon .coupon-wrapper .coupon-wrapper-r .coupon-wrapper-r-title span {
+              font-size: .6rem;
+              color: #7d7d7d; }
+            .page-mycoupons .container .coupons .coupon .coupon-wrapper .coupon-wrapper-r .coupon-wrapper-r-title:before {
+              content: '优惠券';
+              position: absolute;
+              top: 10px;
+              right: 0;
+              z-index: 1;
+              font-size: .5rem;
+              transform: rotate(45deg); }
+            .page-mycoupons .container .coupons .coupon .coupon-wrapper .coupon-wrapper-r .coupon-wrapper-r-title:after {
+              position: absolute;
+              color: #ffd071;
+              width: 0;
+              height: 0;
+              content: '';
+              border-width: 25px;
+              border-style: solid;
+              border-left-color: transparent;
+              border-bottom-color: transparent;
+              top: 0;
+              right: 0; }
+          .page-mycoupons .container .coupons .coupon .coupon-wrapper .coupon-wrapper-r .coupon-wrapper-r-btn {
+            padding-top: .5rem; }
+            .page-mycoupons .container .coupons .coupon .coupon-wrapper .coupon-wrapper-r .coupon-wrapper-r-btn button {
+              margin-right: 1rem;
+              padding: .3rem 1rem;
+              background: white;
+              border: 1px solid #ffd071;
+              font-size: .5rem;
+              border-radius: 5px; }

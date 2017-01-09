@@ -1,0 +1,2366 @@
+@charset "UTF-8";
+
+/* ========== CONTENTS 目录 ========== */
+
+/* 1. RESET 改进默认样式 */
+
+/* 2. FLOAT 浮动 */
+
+/* 3. COMPONENTS 公用组件 */
+
+/* 4. PLACEHOLDER FONT 占位符字体 */
+
+/* 5. STAR 星星评价 */
+
+/* 6. STYLE OF EVERY PAGE 具体页面样式*/
+
+/*   (1) 还车城市 page-choosereturncity */
+
+/*   (2) 客户填写页 page-getcaptcha */
+
+/*   (3) 我的评论页 page-mycomment */
+
+/*   (4) 我的评论页 page-mycomment */
+
+/*   (5) 我的优惠券页 page-mycoupons */
+
+/*   (6) 我的订单 page-myorders */
+
+/*   (7) 我的积分页 page-myscore */
+
+/*   (8) 订车界面 page-ordercar */
+
+/*   (9) 专车订单详情页-立即叫车 page-ordercontact */
+
+/*   (10) 租车订单详情页 page-orderdetail */
+
+/*   (11) 专车订单页 page-orderexclusivecar */
+
+/*   (12) 个人中心 page-profile */
+
+/*   (13) 租车界面 page-rentcar */
+
+/*   (14) 我要分享 page-share */
+
+/*   (15) 我要分享 page-sharedetail */
+
+/*   (16) 图文内容页-客户撰写 page-story */
+
+/*   (17) 用车首页 page-index */
+
+/* ==================================== */
+
+/* ========== RESET 改进默认样式 ==========*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: '黑体', 'Microsoft Yahei', sans-serif;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+textarea {
+  resize: none;
+}
+
+/* ========== FLOAT 浮动 ==========*/
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+/* ========== COMPONENTS 公用组件 ==========*/
+
+/* 黄色的字 */
+
+.yellowfont {
+  color: #ffd071;
+}
+
+.topbar {
+  height: 50px;
+  line-height: 50px;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  background: #ffd071;
+}
+
+.topbar a {
+  width: 50px;
+  font-size: 42px;
+  color: white;
+}
+
+.topbar p {
+  font-family: 'Microsoft Yahei', sans-serif;
+  margin: 0 50px;
+}
+
+.topbar div.fr {
+  width: 50px;
+}
+
+.submit-btn {
+  padding: 16px 0;
+  border: 2px solid #ff8f06;
+  border-radius: 5px;
+  font-size: 24px;
+  color: white;
+  background: #ffc34a;
+}
+
+.normal-btn {
+  display: inline-block;
+  padding: 16px 0;
+  border-radius: 5px;
+  font-family: '黑体',sans-serif;
+  font-size: 24px;
+  color: white;
+  background: #ffd071;
+}
+
+.footer-btn {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  font-family: 'Microsoft Yahei', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  background: #ffd071;
+}
+
+/* ========== PLACEHOLDER FONT 占位符字体 ==========*/
+
+/* 通用 */
+
+::-webkit-input-placeholder {
+  font-family: '黑体', 'Microsoft Yahei', sans-serif;
+  color: #bebebe;
+}
+
+::-moz-placeholder {
+  font-family: '黑体', 'Microsoft Yahei', sans-serif;
+  color: #bebebe;
+}
+
+/* firefox 19+ */
+
+:-ms-input-placeholder {
+  font-family: '黑体', 'Microsoft Yahei', sans-serif;
+  color: #bebebe;
+}
+
+/* ie */
+
+input:-moz-placeholder {
+  font-family: '黑体', 'Microsoft Yahei', sans-serif;
+  color: #bebebe;
+}
+
+/* webkit专用 */
+
+#field2::-webkit-input-placeholder {
+  font-family: '黑体', 'Microsoft Yahei', sans-serif;
+  color: #bebebe;
+}
+
+#field3::-webkit-input-placeholder {
+  font-family: '黑体', 'Microsoft Yahei', sans-serif;
+  color: #bebebe;
+  background: lightgreen;
+  text-transform: uppercase;
+}
+
+#field4::-webkit-input-placeholder {
+  font-family: '黑体', 'Microsoft Yahei', sans-serif;
+  font-style: italic;
+  text-decoration: overline;
+  letter-spacing: 3px;
+  color: #999;
+}
+
+/* mozilla专用 */
+
+#field2::-moz-placeholder {
+  font-family: '黑体', 'Microsoft Yahei', sans-serif;
+  color: #bebebe;
+}
+
+#field3::-moz-placeholder {
+  font-family: '黑体', 'Microsoft Yahei', sans-serif;
+  color: #bebebe;
+  background: lightgreen;
+  text-transform: uppercase;
+}
+
+#field4::-moz-placeholder {
+  font-family: '黑体', 'Microsoft Yahei', sans-serif;
+  font-style: italic;
+  text-decoration: overline;
+  letter-spacing: 3px;
+  color: #bebebe;
+}
+
+/* ========== STAR 星星评价 ==========*/
+
+/* 星星点灯照亮我的家门 */
+
+.star_bg {
+  width: 120px;
+  height: 20px;
+  background: url(../images/star.png) repeat-x;
+  position: relative;
+  overflow: hidden;
+}
+
+.star {
+  height: 100%;
+  width: 24px;
+  line-height: 6em;
+  position: absolute;
+  z-index: 3;
+}
+
+.star:hover {
+  background: url(../images/star.png) repeat-x 0 -20px !important;
+  left: 0;
+  z-index: 2;
+}
+
+.star_1 {
+  left: 0;
+}
+
+.star_2 {
+  left: 24px;
+}
+
+.star_3 {
+  left: 48px;
+}
+
+.star_4 {
+  left: 72px;
+}
+
+.star_5 {
+  left: 96px;
+}
+
+.star_1:hover {
+  width: 24px;
+}
+
+.star_2:hover {
+  width: 48px;
+}
+
+.star_3:hover {
+  width: 72px;
+}
+
+.star_4:hover {
+  width: 96px;
+}
+
+.star_5:hover {
+  width: 120px;
+}
+
+/* 幕后的英雄，单选按钮 */
+
+.score {
+  position: absolute;
+  clip: rect(0 0 0 0);
+}
+
+.score:checked + .star {
+  background: url(../images/star.png) repeat-x 0 -20px;
+  left: 0;
+  z-index: 1;
+}
+
+.score_1:checked ~ .star_1 {
+  width: 24px;
+}
+
+.score_2:checked ~ .star_2 {
+  width: 48px;
+}
+
+.score_3:checked ~ .star_3 {
+  width: 72px;
+}
+
+.score_4:checked ~ .star_4 {
+  width: 96px;
+}
+
+.score_5:checked ~ .star_5 {
+  width: 120px;
+}
+
+.star_bg:hover .star {
+  background-image: none;
+}
+
+/* ========== STYLE OF EVERY PAGE==========*/
+
+/* ========== 具体页面样式 ==========*/
+
+/* 还车城市 page-choosereturncity */
+
+.page-choosereturncity .container p {
+  margin: 1rem 0;
+  margin-left: .5rem;
+}
+
+.page-choosereturncity .cities {
+  font-size: .5rem;
+}
+
+.page-choosereturncity .cities li.eachcity {
+  width: 20%;
+  padding: 6px 3px;
+}
+
+.page-choosereturncity .cities li.eachcity a {
+  display: inline-block;
+  width: 100%;
+  padding: 8px 0;
+  color: black;
+  text-align: center;
+  border: 1px solid #bebebe;
+}
+
+/* 客户填写页 page-getcaptcha */
+
+.page-getcaptcha .container {
+  padding-top: 100px;
+}
+
+.page-getcaptcha li {
+  padding: 7px 30px;
+}
+
+.page-getcaptcha li:last-child {
+  margin-top: 100px;
+}
+
+.page-getcaptcha .enter-tel,
+.page-getcaptcha .enter-captcha-l {
+  padding: 3px 0;
+  border: 1px solid #ff8f06;
+}
+
+.page-getcaptcha .enter-tel i {
+  width: 30px;
+  font-size: 2rem;
+  padding: 3px 6px;
+  color: #ff8f06;
+  border-right: 1px solid #bebebe;
+}
+
+.page-getcaptcha .enter-tel .input-wrapper {
+  margin-left: 35px;
+  padding: 5px 0;
+  padding-left: 5px;
+}
+
+.page-getcaptcha .enter-tel .input-wrapper input {
+  width: 90%;
+  height: 30px;
+  font-size: 1rem;
+}
+
+.page-getcaptcha .enter-captcha {
+  padding: 3px 0;
+}
+
+.page-getcaptcha .enter-captcha .enter-captcha-l {
+  margin-right: 110px;
+}
+
+.page-getcaptcha .enter-captcha .enter-captcha-l i {
+  width: 30px;
+  font-size: 1.2rem;
+  color: #ff8f06;
+  padding: 10px 5px;
+  border-right: 1px solid #bebebe;
+}
+
+.page-getcaptcha .enter-captcha .enter-captcha-l .input-wrapper {
+  margin-left: 35px;
+  padding: 5px 0;
+  padding-left: 5px;
+}
+
+.page-getcaptcha .enter-captcha .enter-captcha-l .input-wrapper input {
+  width: 90%;
+  margin: 0 auto;
+  height: 30px;
+  font-size: 1rem;
+}
+
+.page-getcaptcha .enter-captcha .enter-captcha-r {
+  width: 100px;
+  padding: 3px 0;
+}
+
+.page-getcaptcha .enter-captcha .enter-captcha-r button {
+  width: 100%;
+  padding: 10px;
+  color: white;
+  background: #ffc34a;
+  border: 1px solid #ff8f06;
+  border-radius: 5px;
+}
+
+.page-getcaptcha .btn-wrapper {
+  padding: 0 80px;
+}
+
+.page-getcaptcha .btn-wrapper button {
+  width: 100%;
+  font-size: 1rem;
+}
+
+/* 我的评论页 page-mycomment */
+
+.page-mycomment .container {
+  background: #e6e6e6;
+}
+
+.page-mycomment .comment {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: white;
+}
+
+.page-mycomment .titlename {
+  font-size: 1.2rem;
+  color: #ffd071;
+}
+
+.page-mycomment .detail {
+  margin-top: 1rem;
+  line-height: 1.2rem;
+  color: #7d7d7d;
+}
+
+.page-mycomment .info {
+  margin-top: 1rem;
+  color: #7d7d7d;
+}
+
+.page-mycomment .info .state {
+  width: 50px;
+  color: red;
+}
+
+.page-mycomment .info .time {
+  margin-right: 50px;
+}
+
+.page-mycomment .star-wrapper {
+  margin: 1rem 0;
+}
+
+.page-mycomment .star-wrapper .star-bg {
+  width: 100%;
+}
+
+.page-mycomment .entercomment {
+  height: 150px;
+  padding: 0 10px;
+}
+
+.page-mycomment .entercomment #entercomment {
+  padding: 5px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ffd071;
+  border-radius: 5px;
+}
+
+.page-mycomment .uploadphotos {
+  margin-top: 1rem;
+  padding: 0 10px;
+  color: #ffd071;
+}
+
+.page-mycomment .uploadphotos .uploadphotos-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.page-mycomment .uploadphotos .uploadphotos-btn-wrapper {
+  position: relative;
+  margin-left: 5px;
+}
+
+.page-mycomment .uploadphotos input[type='button'] {
+  background: url("../images/icon-camera.gif") no-repeat;
+  background-position: 50%;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #ffd071;
+  border-radius: 5px;
+}
+
+.page-mycomment .uploadphotos input[type='file'] {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.page-mycomment .btn-wrapper {
+  margin-top: 1rem;
+  padding: 0 60px;
+}
+
+.page-mycomment .btn-wrapper button {
+  width: 100%;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* 我的优惠券页 page-mycoupons */
+
+.page-mycoupons {
+  background: #e6e6e6;
+}
+
+.page-mycoupons .title {
+  position: relative;
+  height: 1.5rem;
+  text-align: center;
+  border-bottom: 1px dashed black;
+}
+
+.page-mycoupons .title span {
+  position: absolute;
+  width: 20%;
+  left: 40%;
+  bottom: -35%;
+  background: #e6e6e6;
+}
+
+.page-mycoupons .coupons {
+  margin-top: 2rem;
+}
+
+.page-mycoupons .coupon {
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+.page-mycoupons .coupon-wrapper {
+  background: white;
+  box-shadow: 5px 5px 10px #888;
+}
+
+.page-mycoupons .coupon-wrapper-l {
+  width: 100px;
+  padding: 10px;
+  background: url("../images/coupon-line.png") no-repeat;
+  background-size: contain;
+  color: #ffd071;
+  text-align: center;
+  border-right: 1px dashed black;
+}
+
+.page-mycoupons .coupon-wrapper-l .coupon-price {
+  margin-top: 10%;
+}
+
+.page-mycoupons .coupon-wrapper-l .coupon-price .data-coupon-price {
+  font-size: 3rem;
+}
+
+.page-mycoupons .coupon-wrapper-r {
+  margin-left: 100px;
+}
+
+.page-mycoupons .coupon-wrapper-r .coupon-wrapper-r-title {
+  position: relative;
+  padding-top: .2rem;
+  padding-left: 1rem;
+}
+
+.page-mycoupons .coupon-wrapper-r .coupon-wrapper-r-title .coupon-title {
+  font-size: 1rem;
+  color: #ffd071;
+}
+
+.page-mycoupons .coupon-wrapper-r .coupon-wrapper-r-title span {
+  font-size: .6rem;
+  color: #7d7d7d;
+}
+
+.page-mycoupons .coupon-wrapper-r .coupon-wrapper-r-title:before {
+  content: '优惠券';
+  position: absolute;
+  top: 10px;
+  right: 0;
+  z-index: 1;
+  font-size: .5rem;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.page-mycoupons .coupon-wrapper-r .coupon-wrapper-r-title:after {
+  position: absolute;
+  color: #ffd071;
+  width: 0;
+  height: 0;
+  content: '';
+  border-width: 25px;
+  border-style: solid;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  top: 0;
+  right: 0;
+}
+
+.page-mycoupons .coupon-wrapper-r .coupon-wrapper-r-btn {
+  padding-top: .5rem;
+}
+
+.page-mycoupons .coupon-wrapper-r .coupon-wrapper-r-btn button {
+  margin-right: 1rem;
+  padding: .3rem 1rem;
+  background: white;
+  border: 1px solid #ffd071;
+  border-radius: 5px;
+}
+
+/* 我的订单 page-myorders */
+
+.page-myorders {
+  background: #e6e6e6;
+}
+
+.page-myorders .order {
+  padding: 1rem;
+  margin: 2rem 0;
+  font-size: .8rem;
+  background: white;
+}
+
+.page-myorders .title {
+  color: #ffd071;
+  font-size: 1.2rem;
+}
+
+.page-myorders .info,
+.page-myorders .status,
+.page-myorders .comment {
+  color: #7d7d7d;
+  margin-top: 10px;
+}
+
+.page-myorders .status .state {
+  width: 100px;
+  color: red;
+  text-align: right;
+}
+
+.page-myorders .status .time {
+  margin-right: 100px;
+}
+
+.page-myorders .status .time .time-l span:first-child {
+  width: 70px;
+}
+
+.page-myorders .status .time .time-l span.data-booking-time {
+  display: block;
+  margin-left: 70px;
+}
+
+.page-myorders .commentphotos li {
+  margin-right: 10px;
+  width: 10%;
+}
+
+.page-myorders .commentphotos li img {
+  width: 100%;
+}
+
+/* 我的积分页 page-myscore */
+
+.page-myscore .container {
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.page-myscore .user-avatar img {
+  width: 60%;
+  border: 2px solid #ffd071;
+  border-radius: 50%;
+}
+
+.page-myscore .username {
+  margin-bottom: 50px;
+}
+
+.page-myscore .totalscore .showscore {
+  color: red;
+}
+
+.page-myscore button {
+  width: 100%;
+  margin-top: 90px;
+}
+
+/* 订车界面 page-ordercar */
+
+.page-ordercar .pickloca {
+  height: 100px;
+  margin: 50px 0;
+  border-top: 1px solid #bebebe;
+  border-bottom: 1px solid #bebebe;
+}
+
+.page-ordercar .pickloca .pickloca-l {
+  width: 70px;
+  padding: 10px 10px;
+}
+
+.page-ordercar .pickloca .pickloca-l i.icon-car {
+  display: inline-block;
+  margin-top: 10%;
+  width: 3.5rem;
+  height: 3.5rem;
+  background: url("../images/icon-car.gif") no-repeat;
+  background: contain;
+}
+
+.page-ordercar .pickloca .pickloca-l span {
+  display: block;
+  font-size: .5rem;
+}
+
+.page-ordercar .pickloca .pickloca-r {
+  width: 80px;
+  border-left: 2px solid #bebebe;
+  padding: 30px 5px;
+}
+
+.page-ordercar .pickloca .pickloca-r span:first-child {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.page-ordercar .pickloca .pickloca-r span:last-child {
+  display: block;
+  font-size: .3rem;
+  color: #7d7d7d;
+}
+
+.page-ordercar .pickloca .pickloca-m {
+  margin-left: 70px;
+  margin-right: 80px;
+  height: 100%;
+}
+
+.page-ordercar .pickloca .pickloca-m a {
+  display: block;
+  height: 50%;
+  padding: 10px 0;
+  font-size: 1.2rem;
+  color: black;
+}
+
+.page-ordercar .pickloca .pickloca-m a:first-child {
+  border-bottom: 2px solid #bebebe;
+}
+
+.page-ordercar .pickloca .pickloca-m a i {
+  width: 30px;
+  padding-right: 20px;
+  color: #bebebe;
+  font-size: 2rem;
+}
+
+.page-ordercar .pickloca .pickloca-m a span {
+  margin-right: 30px;
+}
+
+.page-ordercar .a-wrapper .submit-btn {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* 专车订单详情页-立即叫车 page-ordercontact */
+
+.page-ordercontact {
+  background: #e6e6e6;
+}
+
+.page-ordercontact li.contact-option {
+  height: 50px;
+  line-height: 50px;
+  margin: 1.5rem 0;
+  background: white;
+}
+
+.page-ordercontact li.contact-option i {
+  color: #ffd071;
+}
+
+.page-ordercontact .contact-tel .contact-info {
+  width: 100px;
+}
+
+.page-ordercontact .contact-tel .contact-info i {
+  font-size: 1.5rem;
+  padding-left: 20px;
+}
+
+.page-ordercontact .contact-tel .contact-info span {
+  padding-right: 20px;
+}
+
+.page-ordercontact .contact-tel .span-r {
+  width: 80px;
+  color: #bebebe;
+  border-left: 2px solid #bebebe;
+  text-align: center;
+}
+
+.page-ordercontact .contact-tel .contact-input {
+  margin-left: 100px;
+  margin-right: 80px;
+  padding-right: 10px;
+}
+
+.page-ordercontact .contact-tel .contact-input input {
+  width: 100%;
+  height: 40px;
+  font-size: 1rem;
+  border: 1px solid #bebebe;
+}
+
+.page-ordercontact .contact-loca .contact-info {
+  width: 100px;
+}
+
+.page-ordercontact .contact-loca .contact-info i {
+  font-size: 1.5rem;
+  padding-left: 20px;
+}
+
+.page-ordercontact .contact-loca .contact-info span {
+  padding-right: 20px;
+}
+
+.page-ordercontact .contact-loca .span-r {
+  width: 80px;
+  color: #bebebe;
+  border-left: 2px solid #bebebe;
+  text-align: center;
+}
+
+.page-ordercontact .contact-loca .contact-input {
+  margin-left: 100px;
+  margin-right: 80px;
+  padding-right: 10px;
+}
+
+.page-ordercontact .contact-loca .contact-input input {
+  width: 100%;
+  height: 40px;
+  font-size: 1rem;
+  border: 1px solid #bebebe;
+}
+
+.page-ordercontact .contact-category li {
+  width: 33.3%;
+  border-left: 2px solid #bebebe;
+  text-align: center;
+}
+
+.page-ordercontact .contact-category li:first-child {
+  border-left: 0;
+}
+
+.page-ordercontact .contact-category li .contact-category-radio-wrapper {
+  width: 24px;
+  height: 18px;
+  padding-top: 2px;
+  padding-left: 2px;
+  text-align: center;
+  margin-right: 10px;
+  background-image: url("../images/icon-radio.gif");
+  background-repeat: no-repeat;
+  background-position: -24px 0;
+}
+
+.page-ordercontact .contact-category li .contact-category-radio-wrapper input[type='radio'] {
+  opacity: 0;
+}
+
+.page-ordercontact .contact-category li .on {
+  background-position: 0 0;
+}
+
+.page-ordercontact .contact-coupon i.icon-mycoupon {
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  margin-top: 15px;
+  margin-right: 15px;
+  padding: 10px 0;
+  background: url("../images/icon-mycoupon-ordercontact.png") center no-repeat;
+  background-size: cover;
+}
+
+.page-ordercontact .contact-coupon .contact-coupon-l {
+  margin-right: 150px;
+  padding-left: 20px;
+  color: black;
+}
+
+.page-ordercontact .contact-coupon .contact-coupon-r {
+  width: 150px;
+  color: #bebebe;
+}
+
+.page-ordercontact .contact-coupon .contact-coupon-r i {
+  color: #bebebe;
+  font-size: 2rem;
+  padding: 10px;
+}
+
+.page-ordercontact .footerbar {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  bottom: 0;
+  background: white;
+}
+
+.page-ordercontact .footerbar .footerbar-l {
+  margin-left: 10%;
+}
+
+.page-ordercontact .footerbar .footerbar-r {
+  width: 40%;
+}
+
+.page-ordercontact .footerbar .footerbar-r input[type='submit'] {
+  width: 80%;
+  height: 2rem;
+  font-size: 1rem;
+  padding: 0;
+}
+
+/* 租车订单详情页 page-orderdetail */
+
+.page-orderdetail .swiper-container .swiper-slide img {
+  width: 100%;
+}
+
+.page-orderdetail .swiper-container .swiper-pagination {
+  position: absolute;
+  bottom: 1rem;
+  padding-right: 1rem;
+}
+
+.page-orderdetail .swiper-container .swiper-pagination .swiper-pagination-bullet {
+  float: right;
+  width: 2rem;
+  height: .5rem;
+  background: #c8c8c8;
+  border-radius: 1rem;
+}
+
+.page-orderdetail .swiper-container .swiper-pagination .swiper-pagination-bullet-active {
+  background: white;
+}
+
+.page-orderdetail li.car-detail {
+  color: #7d7d7d;
+  padding: 0 10px;
+}
+
+.page-orderdetail .car-detail-l {
+  width: 200px;
+  padding: 10px 0;
+}
+
+.page-orderdetail .car-detail-l .price-per-day {
+  width: 100px;
+}
+
+.page-orderdetail .car-detail-l .price-per-day .rmbsign,
+.page-orderdetail .car-detail-l .price-per-day .data-price-per-day {
+  font-family: 'Microsoft Yahei', sans-serif;
+  font-weight: bold;
+  color: red;
+  font-size: 1.5rem;
+}
+
+.page-orderdetail .car-detail-l .price-per-hour {
+  margin-left: 100px;
+  padding-top: 10px;
+}
+
+.page-orderdetail .car-detail-l .price-per-hour .rmbsign,
+.page-orderdetail .car-detail-l .price-per-hour .data-price-per-hour {
+  font-family: 'Microsoft Yahei', sans-serif;
+}
+
+.page-orderdetail .car-detail-r {
+  width: 100px;
+}
+
+.page-orderdetail .car-detail-r .data-car-name {
+  display: block;
+  text-align: right;
+  font-size: .5rem;
+}
+
+.page-orderdetail .car-detail-m {
+  margin-left: 200px;
+  margin-right: 100px;
+}
+
+.page-orderdetail li.car-choose-days {
+  border-top: 2px solid #bebebe;
+  border-bottom: 2px solid #bebebe;
+  color: #7d7d7d;
+}
+
+.page-orderdetail .car-choose-days-placeholder-l,
+.page-orderdetail .car-choose-days-placeholder-r {
+  width: 30px;
+}
+
+.page-orderdetail .car-choose-days-wrapper {
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 50%;
+}
+
+.page-orderdetail .car-choose-days-wrapper label.fl {
+  width: 100px;
+}
+
+.page-orderdetail .car-choose-days-wrapper span.fr {
+  width: 10px;
+}
+
+.page-orderdetail .car-choose-days-wrapper .select-wrapper {
+  margin-left: 100px;
+  margin-right: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.page-orderdetail .car-choose-days-wrapper .select-wrapper select {
+  width: 80%;
+  height: 20px;
+  background: transparent;
+  border: 1px solid #bebebe;
+  -webkit-appearance: none;
+  /*for chrome*/
+}
+
+.page-orderdetail .car-choose-days-wrapper .select-wrapper:after {
+  position: absolute;
+  top: 30%;
+  right: 15%;
+  content: '';
+  border-color: #7d7d7d;
+  border-width: 10px;
+  border-left-width: 5px;
+  border-right-width: 5px;
+  border-style: solid;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+}
+
+/* 专车订单页 page-orderexclusivecar */
+
+.page-orderexclusivecar .swiper-container .swiper-slide img {
+  width: 100%;
+}
+
+.page-orderexclusivecar .swiper-container .swiper-pagination {
+  position: absolute;
+  bottom: 2rem;
+  padding-right: 1rem;
+}
+
+.page-orderexclusivecar .swiper-container .swiper-pagination .swiper-pagination-bullet {
+  float: right;
+  width: 2rem;
+  height: .5rem;
+  background: #c8c8c8;
+  border-radius: 1rem;
+}
+
+.page-orderexclusivecar .swiper-container .swiper-pagination .swiper-pagination-bullet-active {
+  background: white;
+}
+
+.page-orderexclusivecar .ordersection a {
+  color: black;
+}
+
+.page-orderexclusivecar .ordersection ul {
+  margin-top: 2rem;
+  padding: 0 50px;
+}
+
+.page-orderexclusivecar .ordersection li.div-group {
+  margin-bottom: 1rem;
+}
+
+.page-orderexclusivecar .ordersection .order-choice {
+  width: 40%;
+  border: 1px solid #ffd071;
+  border-radius: .5rem;
+  text-align: center;
+}
+
+.page-orderexclusivecar .ordersection .order-choice a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.page-orderexclusivecar .ordersection .order-choice a i {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.page-orderexclusivecar .ordersection .order-choice a span {
+  display: block;
+}
+
+.page-orderexclusivecar i.icon-orderexclu-tree1 {
+  background: url("../images/icon-orderexclucar-tree1.jpg") no-repeat;
+  background: cover;
+}
+
+.page-orderexclusivecar i.icon-orderexclu-tree2 {
+  background: url("../images/icon-orderexclucar-tree2.jpg") no-repeat;
+  background: cover;
+}
+
+.page-orderexclusivecar i.icon-orderexclu-train1 {
+  background: url("../images/icon-orderexclucar-train1.jpg") no-repeat;
+  background: cover;
+}
+
+.page-orderexclusivecar i.icon-orderexclu-train2 {
+  background: url("../images/icon-orderexclucar-train2.jpg") no-repeat;
+  background: cover;
+}
+
+.page-orderexclusivecar i.icon-orderexclu-plane1 {
+  background: url("../images/icon-orderexclucar-plane1.jpg") no-repeat;
+  background: cover;
+}
+
+.page-orderexclusivecar i.icon-orderexclu-plane2 {
+  background: url("../images/icon-orderexclucar-plane2.jpg") no-repeat;
+  background: cover;
+}
+
+/* 个人中心 page-profile */
+
+.page-profile {
+  height: 100%;
+  background: #e6e6e6;
+}
+
+.page-profile .user {
+  position: relative;
+  padding: .5rem 0;
+  background: url("../images/profile-bg.png") no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+.page-profile .user .user-avatar img {
+  width: 9rem;
+  height: 9rem;
+  border: 2px solid #ffd071;
+  border-radius: 50%;
+}
+
+.page-profile .user .username {
+  margin-top: .5rem;
+  color: white;
+}
+
+.page-profile .profile-settings li {
+  margin: 1rem 0;
+}
+
+.page-profile .profile-settings .profile-setting {
+  display: block;
+  position: relative;
+  width: 100%;
+  background: white;
+}
+
+.page-profile .profile-settings .profile-setting span {
+  width: 100%;
+  height: 4rem;
+  line-height: 4rem;
+  color: black;
+}
+
+.page-profile .profile-settings i.icon {
+  margin: 1rem 1rem 0;
+  width: 2rem;
+  height: 2rem;
+}
+
+.page-profile .profile-settings i.icon-myorder {
+  background: url("../images/icon-myorder.png") no-repeat;
+  background-size: contain;
+}
+
+.page-profile .profile-settings i.icon-mycoupon {
+  background: url("../images/icon-mycoupon.png") no-repeat;
+  background-size: contain;
+}
+
+.page-profile .profile-settings i.icon-myscore {
+  background: url("../images/icon-myscore.png") no-repeat;
+  background-size: contain;
+}
+
+.page-profile .profile-settings i.icon-mycomment {
+  background: url("../images/icon-mycomment.png") no-repeat;
+  background-size: contain;
+}
+
+.page-profile .profile-settings .fa-angle-right {
+  margin-top: .5rem;
+  margin-right: .5rem;
+  font-size: 3rem;
+  color: #ffd071;
+}
+
+/* 租车界面 page-rentcar */
+
+.page-rentcar li {
+  border-bottom: 2px solid #bebebe;
+}
+
+.page-rentcar li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.page-rentcar .car-option-detail,
+.page-rentcar .car-option-price.fr {
+  height: 100%;
+}
+
+.page-rentcar .car-option-img-wrapper.fl {
+  width: 90px;
+  padding: 30px 0;
+  padding-left: 10px;
+}
+
+.page-rentcar .car-option-img-wrapper.fl img {
+  width: 100%;
+}
+
+.page-rentcar .car-option-detail {
+  margin: 0 100px;
+  line-height: 2rem;
+}
+
+.page-rentcar .car-option-detail .car-brand {
+  padding-top: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffd071;
+}
+
+.page-rentcar .car-option-detail .car-traits {
+  padding-bottom: 20px;
+  color: #7d7d7d;
+  font-size: .8rem;
+}
+
+.page-rentcar .car-option-price.fr {
+  width: 90px;
+  padding-right: 10px;
+}
+
+.page-rentcar .car-option-price.fr .car-option-price-l {
+  color: black;
+  line-height: 20px;
+  padding: 30px 0;
+}
+
+.page-rentcar .car-option-price.fr .car-option-price-l p {
+  vertical-align: bottom;
+}
+
+.page-rentcar .car-option-price.fr .car-option-price-l span {
+  color: red;
+  font-family: 'Microsoft Yahei', sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  vertical-align: top;
+}
+
+.page-rentcar .car-option-price.fr i {
+  font-size: 3rem;
+  color: #7d7d7d;
+  line-height: 100px;
+}
+
+/* 我要分享 page-share */
+
+.page-share .container {
+  text-align: center;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.page-share a.sharelink {
+  display: block;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  border: 1px solid #ffd071;
+}
+
+.page-share a.sharelink:link,
+.page-share a.sharelink:visited {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+/* 我要分享 page-sharedetail */
+
+.page-sharedetail {
+  background: #e6e6e6;
+}
+
+.page-sharedetail .shared-order {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: white;
+  border-bottom: 1px solid black;
+  box-shadow: 0 1px 10px #888;
+}
+
+.page-sharedetail .shared-order-info span {
+  margin-right: 1rem;
+}
+
+.page-sharedetail .shared-order-info span:first-child {
+  margin-right: 0;
+}
+
+.page-sharedetail .shared-order-content {
+  line-height: 2rem;
+}
+
+.page-sharedetail .shared-order-img {
+  width: 40%;
+}
+
+.page-sharedetail .shared-order-img img {
+  width: 100%;
+}
+
+/* 图文内容页-客户撰写 page-story */
+
+.page-story header {
+  position: relative;
+}
+
+.page-story header i {
+  position: absolute;
+  color: white;
+  top: 5%;
+}
+
+.page-story header i.fa-angle-left {
+  left: 5%;
+  font-size: 2rem;
+}
+
+.page-story header i.icon-story-header-share {
+  background: url("../images/icon-story-header-share.png") no-repeat;
+  background-size: contain;
+  right: 5%;
+  width: 2rem;
+  height: 2rem;
+}
+
+.page-story header img {
+  width: 100%;
+}
+
+.page-story .essay-wrapper {
+  padding-top: 2rem;
+}
+
+.page-story .essay-wrapper h2 {
+  width: 90%;
+  margin: 0 auto;
+  font-family: 'Microsoft Yahei', sans-serif;
+}
+
+.page-story .essay-wrapper .essay-pageviews {
+  width: 90%;
+  margin: 0 auto;
+  line-height: 2rem;
+  color: #7d7d7d;
+}
+
+.page-story .essay-wrapper .essay-content .essay-content-writing {
+  padding: 1rem 0;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.page-story .essay-wrapper .essay-content .essay-content-writing p {
+  line-height: 1.5rem;
+  text-indent: 2rem;
+}
+
+.page-story .essay-wrapper .essay-content img {
+  width: 100%;
+}
+
+.page-story .essay-wrapper .essay-content .essay-content-about {
+  padding: 4rem 1rem 4rem 0;
+  line-height: 2rem;
+  text-align: right;
+}
+
+/* 用车首页 page-index */
+
+.page-index {
+  background: #e6e6e6;
+  height: 100%;
+}
+
+.page-index .img-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+}
+
+.page-index a {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  color: white;
+  padding: .5rem 1rem;
+  background: #ffd071;
+  border-radius: 5px;
+}
+
+.page-index li {
+  position: relative;
+}
+
+.page-index .rent-car {
+  top: 0;
+  background: url("../images/rent-car-index-1.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.page-index .get-car {
+  bottom: 0;
+  background: url("../images/rent-car-index-2.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* 包车订单车辆选择页面 page-get-car-choose-car */
+
+.page-get-car-choose-car .top-with-shadow {
+  padding-left: 1rem;
+  line-height: 1.5rem;
+  color: #ffd071;
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5);
+}
+
+.page-get-car-choose-car span.rect {
+  margin-right: .5rem;
+  font-size: .8rem;
+  color: white;
+  background: #ffd071;
+}
+
+.page-get-car-choose-car section {
+  padding: 10rem 2rem;
+  padding-top: 8rem;
+}
+
+.page-get-car-choose-car section li {
+  padding-left: .5rem;
+  padding-right: .5rem;
+  border-top: 1px solid #bebebe;
+}
+
+.page-get-car-choose-car section li:first-child {
+  border-top: none;
+}
+
+.page-get-car-choose-car .slogan {
+  text-align: center;
+  padding: 1rem;
+  font-size: .8rem;
+  color: white;
+  background: #ffd071;
+  border-radius: 5px;
+}
+
+.page-get-car-choose-car .choose-car-detail {
+  margin-top: 1rem;
+  border: 1px solid #bebebe;
+  border-radius: 5px;
+  color: #7d7d7d;
+}
+
+.page-get-car-choose-car li.car-size {
+  padding: .5rem 0;
+  height: 120px;
+  text-align: center;
+}
+
+.page-get-car-choose-car li.car-size .car-size-price {
+  padding-top: 10px;
+}
+
+.page-get-car-choose-car li.car-size .car-size-price .seven-price {
+  margin-left: 50px;
+}
+
+.page-get-car-choose-car li.car-size .car-size-price .on {
+  color: #ffd071;
+}
+
+.page-get-car-choose-car li.car-size .car-size-main {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.page-get-car-choose-car li.car-size .car-size-main .on {
+  border: 1px solid #ffd071;
+  color: #ffd071;
+}
+
+.page-get-car-choose-car li.car-size .five,
+.page-get-car-choose-car li.car-size .seven {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border: 1px solid #bebebe;
+  border-radius: 50%;
+}
+
+.page-get-car-choose-car li.car-size .five {
+  margin-right: 10px;
+}
+
+.page-get-car-choose-car li.car-size i {
+  font-style: normal;
+}
+
+.page-get-car-choose-car li.car-size i.icon-five,
+.page-get-car-choose-car li.car-size i.icon-seven {
+  display: inline-block;
+  margin-top: 20px;
+  width: 80px;
+  height: 30px;
+  background: url("../images/icons/icons-real-car.png") no-repeat;
+}
+
+.page-get-car-choose-car li.car-size i.icon-five {
+  margin-left: 5px;
+}
+
+.page-get-car-choose-car li.car-size i.icon-seven {
+  background-position: -115px 0;
+}
+
+.page-get-car-choose-car li.coupon {
+  height: 50px;
+  line-height: 50px;
+}
+
+.page-get-car-choose-car li.coupon span {
+  padding: .5rem;
+  color: white;
+  background: #ffd071;
+}
+
+.page-get-car-choose-car li.car-info-price .car-info {
+  height: 60px;
+  line-height: 30px;
+}
+
+.page-get-car-choose-car li.car-info-price .car-info p {
+  font-size: 1.2rem;
+  color: #ffd071;
+}
+
+.page-get-car-choose-car li.car-info-price .car-price {
+  margin-top: 1.2rem;
+  font-size: 1.5rem;
+  color: #ffd071;
+}
+
+.page-get-car-choose-car li.car-tel {
+  height: 50px;
+  line-height: 50px;
+}
+
+.page-get-car-choose-car li.car-tel span:first-child {
+  color: #ffd071;
+}
+
+.page-get-car-choose-car .footer-with-shadow {
+  height: 60px;
+  border-top: 1px solid #bebebe;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.page-get-car-choose-car .footer-with-shadow .footer-with-shadow-l {
+  padding-left: 1rem;
+  margin-right: 100px;
+  line-height: 30px;
+}
+
+.page-get-car-choose-car .footer-with-shadow .footer-with-shadow-r {
+  width: 100px;
+  background: #ffd071;
+  text-align: center;
+}
+
+.page-get-car-choose-car .footer-with-shadow .footer-with-shadow-r button {
+  height: 60px;
+  font-size: 1.2rem;
+  color: white;
+  background: #ffd071;
+}
+
+/* 包车订单时间选择页面 page-get-car-choose-time */
+
+.page-get-car-choose-time {
+  /* 弹出： 选择时间*/
+  /* 被选中的项 */
+}
+
+.page-get-car-choose-time .pop-container {
+  width: 100%;
+  background: white;
+  text-align: left;
+}
+
+.page-get-car-choose-time .pop-container .pop-title {
+  padding: .5rem;
+  color: #3bb9ff;
+  border-bottom: 2px solid #3bb9ff;
+}
+
+.page-get-car-choose-time .pop-container .pop-main {
+  padding: 1rem;
+  text-align: center;
+  /* 加号和减号 */
+}
+
+.page-get-car-choose-time .pop-container .pop-main ul {
+  display: inline-block;
+}
+
+.page-get-car-choose-time .pop-container .pop-main li {
+  height: 100px;
+  text-align: center;
+  width: 20%;
+  margin-right: 12px;
+}
+
+.page-get-car-choose-time .pop-container .pop-main .input-wrapper {
+  height: 30px;
+  line-height: 30px;
+}
+
+.page-get-car-choose-time .pop-container .pop-main input {
+  text-align: center;
+  width: 50%;
+}
+
+.page-get-car-choose-time .pop-container .pop-main div.plus,
+.page-get-car-choose-time .pop-container .pop-main div.minus {
+  color: grey;
+  background: #bebebe;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.page-get-car-choose-time section {
+  padding: 2rem 1rem 0;
+}
+
+.page-get-car-choose-time .big-li {
+  margin-bottom: 2rem;
+  padding-left: .5rem;
+  border: 1px solid #bebebe;
+  border-radius: 5px;
+  box-shadow: 1px 6px 10px rgba(0, 0, 0, 0.5);
+}
+
+.page-get-car-choose-time .big-li li {
+  height: 30px;
+  line-height: 30px;
+  border-top: 1px solid #bebebe;
+}
+
+.page-get-car-choose-time .big-li li:first-child {
+  border-top: none;
+}
+
+.page-get-car-choose-time .big-li li .key {
+  padding-right: .5rem;
+  font-weight: bold;
+  border-right: 1px solid #bebebe;
+}
+
+.page-get-car-choose-time .big-li li .value input {
+  padding-left: .5rem;
+}
+
+.page-get-car-choose-time .choose-type {
+  text-align: center;
+}
+
+.page-get-car-choose-time .choose-type-group li {
+  margin-right: 10px;
+}
+
+.page-get-car-choose-time .round-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  border: 1px solid #bebebe;
+  border-radius: 50%;
+}
+
+.page-get-car-choose-time .round-icon-wrapper p {
+  font-size: .5rem;
+}
+
+.page-get-car-choose-time .round-icon-wrapper i {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: url("../images/icons/icons-order-time.png") no-repeat;
+}
+
+.page-get-car-choose-time .round-icon-wrapper i.icon-jieji {
+  background-position: 0px -5px;
+}
+
+.page-get-car-choose-time .round-icon-wrapper i.icon-jiezhan {
+  background-position: -95px -5px;
+}
+
+.page-get-car-choose-time .round-icon-wrapper i.icon-jingdian {
+  background-position: -195px -5px;
+}
+
+.page-get-car-choose-time .round-icon-wrapper i.icon-songji {
+  background-position: 0px -110px;
+}
+
+.page-get-car-choose-time .round-icon-wrapper i.icon-songzhan {
+  background-position: -100px -110px;
+}
+
+.page-get-car-choose-time .round-icon-wrapper i.icon-shangche {
+  width: 60px;
+  background-position: -190px -110px;
+}
+
+.page-get-car-choose-time .choose-type-on .round-icon-wrapper {
+  border: 1px solid #ffd071;
+  color: #ffd071;
+}
+
+.page-get-car-choose-time .choose-type-on i {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: url("../images/icons/icons-order-time-on.png") no-repeat;
+}
+
+.page-get-car-choose-time .choose-type-on span {
+  color: #ffd071;
+}
+
+/* 租车订单确认 page-check-rent-car-order */
+
+.page-check-rent-car-order section {
+  padding: 0 1rem;
+}
+
+.page-check-rent-car-order form {
+  padding: 0 1rem;
+  padding-top: 1rem;
+}
+
+.page-check-rent-car-order form li {
+  margin-bottom: 1rem;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #bebebe;
+}
+
+.page-check-rent-car-order form li .i-wrapper {
+  margin-top: 5px;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-right: 1px solid #bebebe;
+}
+
+.page-check-rent-car-order form li .i-wrapper i {
+  font-size: 2rem;
+  color: #ffd071;
+}
+
+.page-check-rent-car-order form li .i-wrapper i.fa-envelope {
+  font-size: 1.2rem;
+}
+
+.page-check-rent-car-order form li .i-wrapper i.fa-clock-o {
+  font-size: 1.4rem;
+}
+
+.page-check-rent-car-order form li .input-wrapper {
+  margin-left: 30px;
+}
+
+.page-check-rent-car-order form li .input-wrapper input {
+  width: 90%;
+  height: 30px;
+  font-size: 1rem;
+  text-indent: .5rem;
+}
+
+.page-check-rent-car-order form li.get-captcha-li {
+  border: none;
+}
+
+.page-check-rent-car-order form li.get-captcha-li .get-captcha-li-l {
+  margin-right: 90px;
+  border: 1px solid #bebebe;
+}
+
+.page-check-rent-car-order form li.get-captcha-li .get-captcha-li-r {
+  width: 80px;
+  text-align: center;
+}
+
+.page-check-rent-car-order form li.get-captcha-li .get-captcha-li-r button {
+  width: 100%;
+  padding: .8rem 0;
+  color: white;
+  background: #ffd071;
+  border-radius: 5px;
+}
+
+.page-check-rent-car-order form li.set-time-li .input-wrapper {
+  margin-top: -2px;
+  margin-left: 30px;
+  height: 30px;
+}
+
+.page-check-rent-car-order form li.set-time-li .input-wrapper input.short-input {
+  width: 45%;
+  height: 30px;
+  font-size: .5rem;
+  border-left: 1px solid #bebebe;
+}
+
+.page-check-rent-car-order form li.set-time-li .input-wrapper input.short-input:first-child {
+  border-left: none;
+}
+
+.page-check-rent-car-order form textarea {
+  width: 100%;
+  padding: .5rem;
+}
+
+.page-check-rent-car-order .order-details {
+  margin-top: 1rem;
+}
+
+.page-check-rent-car-order .order-details .key {
+  color: black;
+}
+
+.page-check-rent-car-order .order-details .value i {
+  padding-top: 10px;
+  color: #7d7d7d;
+  font-size: 2rem;
+}
+
+.page-check-rent-car-order .order-details .value span {
+  margin-right: 10px;
+}
+
+.page-check-rent-car-order .order-details li.big-li {
+  height: 50px;
+  line-height: 50px;
+  border-top: 2px dashed #ffd071;
+}
+
+.page-check-rent-car-order .order-details li.checked-detail {
+  padding: 1rem 0;
+  border-top: 2px dashed #ffd071;
+  border-bottom: 2px dashed #ffd071;
+}
+
+.page-check-rent-car-order .order-details li.small-li {
+  height: 30px;
+  line-height: 30px;
+}
+
+.page-check-rent-car-order .order-details li.small-li .value {
+  color: red;
+}
+
+.page-check-rent-car-order .footer-with-shadow {
+  width: 100%;
+  padding: 0 1rem;
+  margin-top: 1rem;
+  height: 60px;
+  line-height: 60px;
+  background: white;
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5);
+}
+
+.page-check-rent-car-order .footer-with-shadow .footer-with-shadow-l {
+  color: red;
+}
+
+.page-check-rent-car-order .footer-with-shadow .footer-with-shadow-l .discount {
+  margin-right: 5px;
+}
+
+.page-check-rent-car-order .footer-with-shadow .footer-with-shadow-l .price {
+  margin-right: 10px;
+}
+
+.page-check-rent-car-order .footer-with-shadow .footer-with-shadow-r button {
+  padding: .5rem 1rem;
+  color: white;
+  background: #ffd071;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+/* 规则页面 page-rules */
+
+.page-rules section {
+  padding: 0 2rem;
+}
+
+.page-rules p.main-title {
+  line-height: 3rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.page-rules p.yellowfont {
+  line-height: 3rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.page-rules div.price-wrapper {
+  line-height: 3rem;
+  font-size: 1.2rem;
+}
+
+.page-rules div.price-rules {
+  line-height: 2rem;
+}
+
+.page-rules div.price-rules p:last-child {
+  line-height: 1.5rem;
+  font-size: .8rem;
+  color: #7d7d7d;
+}
+
+.page-rules ul li {
+  margin: 3rem 0;
+}
+
+.page-rules ul li p.title {
+  padding-bottom: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #bebebe;
+}
+
+.page-rules ul li p:last-child {
+  line-height: 2rem;
+  font-size: .8rem;
+}
+
+.page-rules .footer-with-shadow {
+  width: 100%;
+  text-align: center;
+  height: 50px;
+  box-shadow: 1px 1px 35px rgba(0, 0, 0, 0.5);
+}
+
+.page-rules .footer-with-shadow .i-wrapper {
+  display: inline-block;
+}
+
+.page-rules .footer-with-shadow i {
+  width: 50px;
+  height: 50px;
+  font-size: 3rem;
+}
+
+/* 增值服务页 page-zengzhi*/
+
+.page-zengzhi {
+  /* 弹窗： checkbox */
+  /* 弹窗： 商品细节轮播图 */
+  /* 弹窗： 兑换订单确认 */
+}
+
+.page-zengzhi section {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 10rem;
+}
+
+.page-zengzhi .img-wrapper img {
+  width: 100%;
+}
+
+.page-zengzhi ul.zengzhi-ul {
+  margin-bottom: 5rem;
+}
+
+.page-zengzhi li.zengzhi-li {
+  position: relative;
+  text-align: center;
+  width: 20%;
+}
+
+.page-zengzhi li.zengzhi-li a {
+  display: block;
+  padding-top: .5rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #ff831e;
+  border: 3px solid #ff831e;
+}
+
+.page-zengzhi li.zengzhi-li::after {
+  position: absolute;
+  top: 50px;
+  left: 25px;
+  content: '';
+  width: 2px;
+  height: 100px;
+  background: #ff831e;
+}
+
+.page-zengzhi li.zengzhi-li.digital::after {
+  height: 70px;
+}
+
+.page-zengzhi li.zengzhi-li.deco::after,
+.page-zengzhi li.zengzhi-li.insurance::after {
+  height: 80px;
+}
+
+.page-zengzhi .text-wrapper {
+  text-align: center;
+}
+
+.page-zengzhi .text-wrapper a {
+  margin: 1rem 0;
+  display: inline-block;
+  padding: .5rem 1rem;
+  background: #ffd071;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.page-zengzhi .pop-container {
+  background: #f5f5f5;
+}
+
+.page-zengzhi .pop-container .pop-title {
+  height: 40px;
+  line-height: 40px;
+}
+
+.page-zengzhi .pop-container .pop-title .fl,
+.page-zengzhi .pop-container .pop-title .fr {
+  width: 30px;
+}
+
+.page-zengzhi .pop-container .pop-title p {
+  margin: 0 30px;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.page-zengzhi .pop-container .pop-title .i-wrapper {
+  font-size: 1.5rem;
+}
+
+.page-zengzhi .pop-container .pop-main .pop-li {
+  background: white;
+  height: 100px;
+  border-bottom: 4px solid #ffd071;
+  /* checkbox */
+  /* 图片正方形自适应*/
+}
+
+.page-zengzhi .pop-container .pop-main .pop-li .pop-li-r {
+  height: 100%;
+  line-height: 100px;
+  width: 50px;
+}
+
+.page-zengzhi .pop-container .pop-main .pop-li .pop-li-l {
+  margin-right: 50px;
+}
+
+.page-zengzhi .pop-container .pop-main .pop-li .figure-wrapper {
+  margin-top: 20px;
+  margin-left: 10px;
+  width: 60px;
+  height: 60px;
+}
+
+.page-zengzhi .pop-container .pop-main .pop-li .figure-wrapper figure {
+  border-radius: 5px;
+  position: relative;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  margin: 0;
+  padding-bottom: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.page-zengzhi .pop-container .pop-main .pop-li .text-wrapper {
+  margin-left: 70px;
+  padding: 1rem .5rem;
+  height: 90px;
+  text-align: left;
+  font-size: .8rem;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.page-zengzhi .pop-container .pop-btn {
+  padding: 1rem;
+}
+
+.page-zengzhi .pop-container .pop-btn button {
+  padding: .5rem 1rem;
+  color: white;
+  background: #ffd071;
+  border-radius: 5px;
+}
+
+.page-zengzhi .pop-container .pop-btn#checkout-wrapper {
+  padding-top: 0;
+}
+
+.page-zengzhi .pop-product-swiper {
+  background: transprent;
+}
+
+.page-zengzhi .pop-product-swiper .pop-main .swiper-container .swiper-title {
+  color: #ffd071;
+}
+
+.page-zengzhi .pop-product-swiper .pop-main .swiper-container .swiper-title i {
+  color: white;
+}
+
+.page-zengzhi .pop-product-swiper .pop-main .swiper-container .swiper-slide img {
+  width: 100%;
+}
+
+.page-zengzhi .pop-product-swiper .pop-main .swiper-container .swiper-pagination {
+  position: absolute;
+  z-index: 999;
+}
+
+.page-zengzhi .pop-product-swiper .pop-main .swiper-container .swiper-pagination .swiper-pagination-bullet {
+  float: right;
+  width: 50px;
+  height: 20px;
+  background: red;
+  border-radius: 1rem;
+}
+
+.page-zengzhi .pop-product-swiper .pop-main .swiper-container .swiper-pagination .swiper-pagination-bullet-active {
+  background: white;
+}
+
+.page-zengzhi .pop-checkout .pop-title {
+  height: 40px;
+  line-height: 40px;
+  background: #ffd071;
+  color: white;
+}
+
+.page-zengzhi .pop-checkout .pop-title .fl,
+.page-zengzhi .pop-checkout .pop-title .fr {
+  width: 30px;
+}
+
+.page-zengzhi .pop-checkout .pop-title p {
+  margin: 0 30px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.page-zengzhi .pop-checkout .pop-title .i-wrapper {
+  font-size: 1.2rem;
+}
+
+.page-zengzhi .pop-checkout .pop-main {
+  padding: 1rem .5rem;
+  padding-left: 0;
+  text-align: left;
+}
+
+.page-zengzhi .pop-checkout .pop-main p {
+  padding-left: .5rem;
+  padding-bottom: .5rem;
+}
+
+.page-zengzhi .pop-checkout .pop-main li {
+  position: relative;
+  margin: .5rem 0;
+}
+
+.page-zengzhi .pop-checkout .pop-main li .fl {
+  background: white;
+  position: absolute;
+  z-index: 1;
+  left: 5px;
+  text-align: center;
+  padding-top: 12px;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #ffd071;
+  border-radius: 50%;
+  color: #ffd071;
+}
+
+.page-zengzhi .pop-checkout .pop-main li .products {
+  padding-left: 30px;
+  margin-left: 30px;
+  height: 50px;
+  border: 2px solid #ffd071;
+  border-radius: 0 5px 5px 0;
+  font-size: .8rem;
+}
+
+.page-zengzhi .pop-checkout .pop-main li .products span {
+  vertical-align: middle;
+}
+
+.page-zengzhi .pop-checkout .pop-main .total-price,
+.page-zengzhi .pop-checkout .pop-main .note {
+  padding: .5rem 0;
+  text-align: right;
+}
+
+.page-zengzhi .pop-checkout .pop-main .note {
+  font-size: .6rem;
+}
+
+.page-zengzhi .pop-checkout .pop-btn {
+  padding-bottom: 2rem;
+}
+
+.page-zengzhi .pop-checkout .pop-btn button {
+  padding: .5rem 1rem;
+  color: white;
+  background: #ffd071;
+  border-radius: 5px;
+}

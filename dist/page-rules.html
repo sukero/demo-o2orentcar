@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>规则页面</title>
+  </head>
+</html>
+<body class="page-rules">
+  <section>
+    <p class="main-title">价格规则</p>
+    <p class="yellowfont">￥587</p>
+    <div class="price-wrapper">
+      <p class="fl">起步费</p>
+      <p class="fr">￥587</p>
+      <div class="clear"></div>
+    </div>
+    <div class="price-rules">
+      <p>计费规则</p>
+      <p>价格有系统计算，并未参考堵车，封路，天气，等实际因素。不包含停车费，高速费等司机垫付费用，具体费用以车辆实际行驶情况为准。</p>
+    </div>
+    <ul>
+      <li>
+        <p class="title">温馨提示</p>
+        <p>发票可以在下单之后，到订单详情页中索取<br>当您选择的车型无人接单时，我们会为您派发其他车型。</p>
+      </li>
+      <li>
+        <p class="title">取消规则</p>
+        <p>发票可以在下单之后，到订单详情页中索取</p>
+      </li>
+    </ul>
+  </section>
+  <div id="footer" class="footer-with-shadow">
+    <div class="i-wrapper"><i class="fa fa-times-circle-o"></i></div>
+  </div>
+  <script>
+    var vpH = window.innerHeight;
+    var bodyH = document.body.clientHeight;
+    var footer = document.getElementById('footer');
+    
+    if (bodyH > vpH) {
+    footer.style.position = 'relative';
+    } else if (bodyH < vpH) {
+    footer.style.position = 'absolute';
+    footer.style.bottom = '0';
+    }
+  </script>
+</body>

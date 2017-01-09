@@ -1,0 +1,20 @@
+@charset "UTF-8";
+@import url(styles.css);
+/* 我的积分页 page-myscore */
+.page-myscore .container {
+  font-family: '黑体', 'Microsoft Yahei', sans-serif;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 50px; }
+  .page-myscore .container .user-avatar img {
+    width: 60%;
+    border: 2px solid #ffd071;
+    border-radius: 50%; }
+  .page-myscore .container .username {
+    margin-bottom: 50px; }
+  .page-myscore .container .totalscore .showscore {
+    color: red; }
+  .page-myscore .container button {
+    width: 100%;
+    margin-top: 90px; }

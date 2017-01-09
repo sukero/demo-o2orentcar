@@ -1,0 +1,136 @@
+-var title = '包车订单时间选择页面'
+include includes/head.jade
+body.page-get-car-choose-time
+  header.topbar
+    p 选择包车时间
+  section
+    ul.choose-time
+      li.big-li
+        ul
+          li
+            div.key.fl
+              span 用车城市
+            div.value
+              input(type="text", placeholder='请输入城市')
+            div.clear
+          li
+            div.key.fl
+              span 上车地点
+            div.value
+              input(type="text", placeholder='请选择出发地点')
+            div.clear
+      li.big-li
+        ul
+          li
+            div.key.fl
+              span 上车时间
+            div.value#enter-time
+              input(type="text", placeholder='请输入用车时间')
+            div.clear
+          li
+            div.key.fl
+              span 用车时长
+            div.value
+              input(type="radio", name='use-car-time')
+              label 半天
+              input(type="radio", name='use-car-time')
+              label 一天
+              input(type="radio", name='use-car-time')
+              label 2h
+            div.clear
+    ul.choose-type
+      li(style='display:inline-block;').choose-type-group
+        ul
+          li.choose-type-on.fl
+            div.round-icon-wrapper
+              i.icon-jieji
+              p 接机
+            span ￥360
+          li.fl
+            div.round-icon-wrapper
+              i.icon-jiezhan
+              p 接站
+            span ￥360
+          li.fl
+            div.round-icon-wrapper
+              i.icon-jingdian
+              p 接送景点
+            span ￥360
+          div.clear
+      li(style='display:inline-block;').choose-type-group
+        ul
+          li.fl
+            div.round-icon-wrapper
+              i.icon-songji
+              p 送机
+            span ￥360
+          li.fl
+            div.round-icon-wrapper
+              i.icon-songzhan
+              p 送站
+            span ￥360
+          li.fl
+            div.round-icon-wrapper
+              i.icon-shangche
+              p 上车再说
+            span ￥360
+          div.clear
+  div(style='display:none;').pop-container
+    div.pop-content
+      div.pop-title
+        i.fa.fa-close.close.fr
+        p 2016年
+      div.pop-main
+        ul
+          li.fl
+            div.plus
+              i.fa.fa-plus
+            div.input-wrapper
+              span.fr 月
+              input(type="text")
+              div.clear
+            div.minus
+              i.fa.fa-minus
+          li.fl
+            div.plus
+              i.fa.fa-plus
+            div.input-wrapper
+              span.fr 日
+              input(type="text")
+              div.clear
+            div.minus
+              i.fa.fa-minus
+          li.fl
+            div.plus
+              i.fa.fa-plus
+            div.input-wrapper
+              span.fr 时
+              input(type="text")
+              div.clear
+            div.minus
+              i.fa.fa-minus
+          li.fl
+            div.plus
+              i.fa.fa-plus
+            div.input-wrapper
+              span.fr 分
+              input(type="text")
+              div.clear
+            div.minus
+              i.fa.fa-minus
+          div.clear
+  script(src='https://cdn.bootcss.com/jquery/3.1.0/jquery.min.js')
+  script(src='js/lib/jquery.blockUI.js')
+  script.
+    $('#enter-time').click(function () {
+      $.blockUI({
+        message: $('.pop-container'),
+        css: {
+          border: 'none',
+          width: '80%',
+          left: '10%'
+        }
+      });
+      $('.close').click($.unblockUI);
+    });
+    

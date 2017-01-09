@@ -1,0 +1,102 @@
+@import "styles.css";
+
+// Variables
+$themecolor: #ffd071;
+$submitbtnbg: #ffc34a;
+$btnbordercolor: #ff8f06;
+$borderlight:#bebebe;
+$bglight: #e6e6e6;
+
+/* 专车订单页 page-orderexclusivecar */
+.page-orderexclusivecar {
+
+  & .container {
+    width: 100%;
+
+    & .swiper-container {
+      width: 100%;
+      // height: 13rem;
+
+      & .swiper-slide {
+        & img {
+          width: 100%;
+        }
+      }
+      & .swiper-pagination {
+        position: absolute;
+        bottom: 2rem;
+        padding-right: 1rem;
+        & .swiper-pagination-bullet {
+          float: right;
+          width: 2rem;
+          height: .5rem;
+          background: #c8c8c8;
+          border-radius: 1rem;
+        }
+        & .swiper-pagination-bullet-active {
+          background: white;
+        }
+      }
+    }
+
+    & .ordersection {
+      width: 100%;
+      & a {
+        color: black;
+      }
+      & ul {
+        margin-top: 2rem;
+        padding: 0 50px;
+
+        & li.div-group {
+          width: 100%;
+          margin-bottom: 1rem;
+        }
+        & div.order-choice {
+          width: 40%;
+          border: 1px solid $themecolor;
+          border-radius: .5rem;
+          text-align: center;
+
+          & a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            & i {
+              display: inline-block;
+              width: 2.5rem;
+              height: 2.5rem;
+            }
+            & span {
+              display: block;
+            }
+          }
+          & i.icon-orderexclu-tree1 {
+            background: url('../images/icon-orderexclucar-tree1.jpg') no-repeat;
+            background: cover;
+          }
+          & i.icon-orderexclu-tree2 {
+            background: url('../images/icon-orderexclucar-tree2.jpg') no-repeat;
+            background: cover;
+          }
+          & i.icon-orderexclu-train1 {
+            background: url('../images/icon-orderexclucar-train1.jpg') no-repeat;
+            background: cover;
+          }
+          & i.icon-orderexclu-train2 {
+            background: url('../images/icon-orderexclucar-train2.jpg') no-repeat;
+            background: cover;
+          }
+          & i.icon-orderexclu-plane1 {
+            background: url('../images/icon-orderexclucar-plane1.jpg') no-repeat;
+            background: cover;
+          }
+          & i.icon-orderexclu-plane2 {
+            background: url('../images/icon-orderexclucar-plane2.jpg') no-repeat;
+            background: cover;
+          }
+        }
+      }
+    }
+  }
+}

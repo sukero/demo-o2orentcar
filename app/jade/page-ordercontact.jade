@@ -1,0 +1,137 @@
+doctype
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+    link(rel="stylesheet", href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css")
+    link(rel="stylesheet", href="css/lib/validate.css")
+    link(rel="stylesheet", href="css/index.css")
+    title 专车订单详情页-立即叫车
+  body.page-ordercontact
+    header.topbar
+      a(href="page-orderexclusivecar.html").fl
+        i.fa.fa-angle-left
+      p 立即叫车
+      div.fr
+      div.clear
+    div.container
+      form(action="post")#form1
+        ul
+          li.contact-tel.contact-option
+            div.contact-info.fl
+              span.fr +86
+              i.fa.fa-user
+              div.clear
+            span.span-r.fr
+            div.contact-input.control-field
+              input(type="tel", placeholder='请输入手机号',data-validate="phone", date-required="true", data-describedby="phone-description").field-text
+            div.clear
+          li.contact-loca.contact-option
+            div.contact-info.fl
+              span.data-loca-city.fr 天津
+              i.fa.fa-map-marker
+              div.clear
+            span.span-r.fr 出发地
+            div.contact-input.control-field
+              input(type="text", placeholder='请输入出发地', data-validate="start", date-required="true", data-describedby="start-description").field-text
+            div.clear
+          li.contact-loca.contact-option
+            div.contact-info.fl
+              span.data-loca-city.fr 天津
+              i.fa.fa-map-marker
+              div.clear
+            span.span-r.fr 目的地
+            div.contact-input.control-field
+              input(type="text", placeholder='请输入目的地', data-validate="dest", date-required="true", data-describedby="dest-description").field-text
+            div.clear
+          li.contact-category.contact-option
+            ul
+              li.fl
+                label(for="gongwu") 公务车
+                span.contact-category-radio-wrapper.on
+                  input(checked='checked',type="radio",name='contact-category',value='gongwu')#gongwu
+              li.fl
+                label(for="shangwu") 商务车
+                span.contact-category-radio-wrapper
+                  input(type="radio",name='contact-category',value='shangwu')#shangwu
+              li.fl
+                label(for="haohua") 豪华轿车
+                span.contact-category-radio-wrapper
+                  input(type="radio",name='contact-category',value='haohua')#haohua
+              div.clear
+          li.contact-coupon.contact-option
+            a(href="page-mycoupons.html")
+              div.contact-coupon-r.fr
+                i.fa.fa-angle-right.fr
+                span 未使用优惠券
+                div.clear
+              div.contact-coupon-l
+                i.icon-mycoupon.fl
+                span 优惠券
+                div.clear
+              div.clear
+        footer.footerbar
+          div.footerbar-l.fl
+            span 预估价：
+            span.data-price 366
+            span 元
+          div.footerbar-r.fr
+            input(type="submit", value='提 交').normal-btn
+          div.clear
+    script(src='https://cdn.bootcss.com/jquery/3.1.0/jquery.min.js')
+    script(src='https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js')
+    script(src='js/radio.js')
+    script(src='js/lib/jquery-mvalidate.js')
+    script.
+      $(function(){
+        $.mvalidateExtend({
+            phone:{
+                required : true,   
+                pattern : /^0?1[3|4|5|8][0-9]\d{8}$/,
+                each: function () {
+                  
+                },
+                descriptions:{
+                    required : '<div class="field-invalidmsg">请输入手机号码</div>',
+                    pattern : '<div class="field-invalidmsg">手机号码格式不正确</div>',
+                    valid : '<div class="field-validmsg">正确</div>'
+                }
+            },
+            start: {
+              required: true,
+              descriptions:{
+                  required : '<div class="field-invalidmsg">请输入出发地</div>'
+              }
+            },
+            dest: {
+              required: true,
+              descriptions: {
+                required: '<div class="field-invalidmsg">请输入目的地</div>'
+              }
+            }
+        });
+        var instance=null;
+        function show(text){
+          if(!instance){
+            var $container=$('<div class="field-tooltipWrap"><div class="field-tooltipInner"><div class="field-tooltip fieldTipBounceIn">'+'<div class="zvalid-resultformat"><div class="field-invalidmsg">'+text+'</div></div></div></div></div>');
+              $container.css('background', 'red');
+              $container.appendTo($("body"));
+              instance=true;
+              setTimeout(function(){
+              $container.remove();
+              instance=false;
+            },1500)
+          }
+        }
+        $("#form1").mvalidate({
+          type:1,
+          onKeyup:true,
+          sendForm:true,
+          firstInvalidFocus:false,
+          valid:function(event,options){
+              //点击提交按钮时,表单通过验证触发函数
+              show('验证通过');
+              event.preventDefault();
+          }
+        });
+      });

@@ -1,0 +1,41 @@
+@import "styles.css";
+
+// Variables
+$themecolor: #ffd071;
+$submitbtnbg: #ffc34a;
+$btnbordercolor: #ff8f06;
+$borderlight:#bebebe;
+$bglight: #e6e6e6;
+
+/* 还车城市 page-choosereturncity */
+.page-choosereturncity {
+
+  & .container {
+    & p {
+      margin: 1rem 0;
+      margin-left: .5rem;
+    }
+    & .cities {
+      font-size: .5rem;
+      & li.citygroup {
+        width: 100%;
+
+        & li.eachcity {
+          width: 20%;
+          height: 50px;
+          padding: 6px 3px;
+
+          & a {
+            display: inline-block;
+            width: 100%;
+            height: 30px;
+            padding: 8px 0;
+            color: black;
+            text-align: center;
+            border: 1px solid $borderlight;
+          }
+        }
+      }
+    }
+  }
+}

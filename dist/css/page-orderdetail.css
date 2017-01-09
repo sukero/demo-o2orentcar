@@ -1,0 +1,404 @@
+@charset "UTF-8";
+
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: '黑体', 'Microsoft Yahei', sans-serif;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+textarea {
+  resize: none;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+.topbar {
+  height: 50px;
+  line-height: 50px;
+  font-family: 'Microsoft Yahei', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  background: #ffd071;
+}
+
+.topbar a {
+  display: inline-block;
+  width: 50px;
+  font-size: 42px;
+  color: white;
+}
+
+.topbar p {
+  font-family: 'Microsoft Yahei', sans-serif;
+  margin: 0 50px;
+}
+
+.topbar div.fr {
+  width: 50px;
+}
+
+.submit-btn {
+  display: inline-block;
+  padding: 16px 0;
+  border: 2px solid #ff8f06;
+  border-radius: 5%;
+  font-family: '黑体',sans-serif;
+  font-size: 24px;
+  color: white;
+  background: #ffc34a;
+}
+
+.normal-btn {
+  display: inline-block;
+  padding: 16px 0;
+  border-radius: 5%;
+  font-family: '黑体',sans-serif;
+  font-size: 24px;
+  color: white;
+  background: #ffd071;
+}
+
+.footer-btn {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  font-family: 'Microsoft Yahei', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  background: #ffd071;
+}
+
+/* 通用 */
+
+::-webkit-input-placeholder {
+  font-family: '黑体', 'Microsoft Yahei', sans-serif;
+  color: #bebebe;
+}
+
+::-moz-placeholder {
+  font-family: '黑体', 'Microsoft Yahei', sans-serif;
+  color: #bebebe;
+}
+
+/* firefox 19+ */
+
+:-ms-input-placeholder {
+  font-family: '黑体', 'Microsoft Yahei', sans-serif;
+  color: #bebebe;
+}
+
+/* ie */
+
+input:-moz-placeholder {
+  font-family: '黑体', 'Microsoft Yahei', sans-serif;
+  color: #bebebe;
+}
+
+/* webkit专用 */
+
+#field2::-webkit-input-placeholder {
+  font-family: '黑体', 'Microsoft Yahei', sans-serif;
+  color: #bebebe;
+}
+
+#field3::-webkit-input-placeholder {
+  font-family: '黑体', 'Microsoft Yahei', sans-serif;
+  color: #bebebe;
+  background: lightgreen;
+  text-transform: uppercase;
+}
+
+#field4::-webkit-input-placeholder {
+  font-family: '黑体', 'Microsoft Yahei', sans-serif;
+  font-style: italic;
+  text-decoration: overline;
+  letter-spacing: 3px;
+  color: #999;
+}
+
+/* mozilla专用 */
+
+#field2::-moz-placeholder {
+  font-family: '黑体', 'Microsoft Yahei', sans-serif;
+  color: #bebebe;
+}
+
+#field3::-moz-placeholder {
+  font-family: '黑体', 'Microsoft Yahei', sans-serif;
+  color: #bebebe;
+  background: lightgreen;
+  text-transform: uppercase;
+}
+
+#field4::-moz-placeholder {
+  font-family: '黑体', 'Microsoft Yahei', sans-serif;
+  font-style: italic;
+  text-decoration: overline;
+  letter-spacing: 3px;
+  color: #bebebe;
+}
+
+/* 星星点灯照亮我的家门 */
+
+.star_bg {
+  width: 120px;
+  height: 20px;
+  background: url(../images/star.png) repeat-x;
+  position: relative;
+  overflow: hidden;
+}
+
+.star {
+  height: 100%;
+  width: 24px;
+  line-height: 6em;
+  position: absolute;
+  z-index: 3;
+}
+
+.star:hover {
+  background: url(../images/star.png) repeat-x 0 -20px !important;
+  left: 0;
+  z-index: 2;
+}
+
+.star_1 {
+  left: 0;
+}
+
+.star_2 {
+  left: 24px;
+}
+
+.star_3 {
+  left: 48px;
+}
+
+.star_4 {
+  left: 72px;
+}
+
+.star_5 {
+  left: 96px;
+}
+
+.star_1:hover {
+  width: 24px;
+}
+
+.star_2:hover {
+  width: 48px;
+}
+
+.star_3:hover {
+  width: 72px;
+}
+
+.star_4:hover {
+  width: 96px;
+}
+
+.star_5:hover {
+  width: 120px;
+}
+
+/* 幕后的英雄，单选按钮 */
+
+.score {
+  position: absolute;
+  clip: rect(0 0 0 0);
+}
+
+.score:checked + .star {
+  background: url(../images/star.png) repeat-x 0 -20px;
+  left: 0;
+  z-index: 1;
+}
+
+.score_1:checked ~ .star_1 {
+  width: 24px;
+}
+
+.score_2:checked ~ .star_2 {
+  width: 48px;
+}
+
+.score_3:checked ~ .star_3 {
+  width: 72px;
+}
+
+.score_4:checked ~ .star_4 {
+  width: 96px;
+}
+
+.score_5:checked ~ .star_5 {
+  width: 120px;
+}
+
+.star_bg:hover .star {
+  background-image: none;
+}
+
+/* 租车订单详情页 page-orderdetail */
+
+.page-orderdetail .container .swiper-container {
+  width: 100%;
+}
+
+.page-orderdetail .container .swiper-container .swiper-slide img {
+  width: 100%;
+}
+
+.page-orderdetail .container .swiper-container .swiper-pagination {
+  position: absolute;
+  bottom: 1rem;
+  padding-right: 1rem;
+}
+
+.page-orderdetail .container .swiper-container .swiper-pagination .swiper-pagination-bullet {
+  float: right;
+  width: 2rem;
+  height: .5rem;
+  background: #c8c8c8;
+  border-radius: 1rem;
+}
+
+.page-orderdetail .container .swiper-container .swiper-pagination .swiper-pagination-bullet-active {
+  background: white;
+}
+
+.page-orderdetail .container li.car-detail {
+  color: #7d7d7d;
+  padding: 0 10px;
+}
+
+.page-orderdetail .container li.car-detail .car-detail-l {
+  width: 200px;
+  padding: 10px 0;
+}
+
+.page-orderdetail .container li.car-detail .car-detail-l .price-per-day {
+  width: 100px;
+}
+
+.page-orderdetail .container li.car-detail .car-detail-l .price-per-day span.rmbsign,
+.page-orderdetail .container li.car-detail .car-detail-l .price-per-day span.data-price-per-day {
+  font-family: 'Microsoft Yahei', sans-serif;
+  font-weight: bold;
+  color: red;
+  font-size: 1.5rem;
+}
+
+.page-orderdetail .container li.car-detail .car-detail-l .price-per-hour {
+  margin-left: 100px;
+  padding-top: 10px;
+}
+
+.page-orderdetail .container li.car-detail .car-detail-l .price-per-hour span.rmbsign,
+.page-orderdetail .container li.car-detail .car-detail-l .price-per-hour span.data-price-per-hour {
+  font-family: 'Microsoft Yahei', sans-serif;
+}
+
+.page-orderdetail .container li.car-detail .car-detail-r {
+  width: 100px;
+}
+
+.page-orderdetail .container li.car-detail .car-detail-r .data-car-name {
+  display: block;
+  text-align: right;
+  font-size: .5rem;
+}
+
+.page-orderdetail .container li.car-detail .car-detail-m {
+  margin-left: 200px;
+  margin-right: 100px;
+}
+
+.page-orderdetail .container li.car-choose-days {
+  border-top: 2px solid #bebebe;
+  border-bottom: 2px solid #bebebe;
+  color: #7d7d7d;
+}
+
+.page-orderdetail .container li.car-choose-days .car-choose-days-placeholder-l,
+.page-orderdetail .container li.car-choose-days .car-choose-days-placeholder-r {
+  width: 30px;
+}
+
+.page-orderdetail .container li.car-choose-days .car-choose-days-wrapper {
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 50%;
+}
+
+.page-orderdetail .container li.car-choose-days .car-choose-days-wrapper label.fl {
+  width: 100px;
+}
+
+.page-orderdetail .container li.car-choose-days .car-choose-days-wrapper span.fr {
+  width: 10px;
+}
+
+.page-orderdetail .container li.car-choose-days .car-choose-days-wrapper .select-wrapper {
+  margin-left: 100px;
+  margin-right: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.page-orderdetail .container li.car-choose-days .car-choose-days-wrapper .select-wrapper select {
+  width: 80%;
+  height: 20px;
+  background: transparent;
+  border: 1px solid #bebebe;
+  -webkit-appearance: none;
+  /*for chrome*/
+}
+
+.page-orderdetail .container li.car-choose-days .car-choose-days-wrapper .select-wrapper:after {
+  position: absolute;
+  top: 30%;
+  right: 15%;
+  content: '';
+  border-color: #7d7d7d;
+  border-width: 10px;
+  border-left-width: 5px;
+  border-right-width: 5px;
+  border-style: solid;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+}

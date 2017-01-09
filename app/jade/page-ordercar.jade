@@ -1,0 +1,54 @@
+doctype
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+    link(rel="stylesheet", href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css")
+    link(href="//cdn.bootcss.com/Swiper/3.3.1/css/swiper.min.css",rel="stylesheet")
+    link(rel="stylesheet", href="css/index.css")
+    title 订车界面
+  body.page-ordercar
+    header.topbar
+      a(href="#").fl
+        i.fa.fa-angle-left
+      p 自驾租车
+      div.fr
+      div.clear
+    div.container
+      ul
+        li.pickloca
+          div.pickloca-l.fl
+            i.icon-car
+            span 取车时间
+          div.pickloca-r.fr
+            span.data-date 6月2日
+            span.data-time 今天13：00
+          div.pickloca-m
+            a(href="page-choosegetcity.html").city
+              i.fa.fa-angle-right.fr
+              span.data-choosegetcity 天津
+              div.clear
+            a(href="#").place
+              i.fa.fa-angle-right.fr
+              span.data-choosegetloca 天津站
+              div.clear
+          div.clear
+        li.pickloca
+          div.pickloca-l.fl
+            i.icon-car
+            span 还车时间
+          div.pickloca-r.fr
+            span.data-date 6月2日
+            span.data-time 今天13：00
+          div.pickloca-m
+            a(href="page-choosereturncity.html").city
+              i.fa.fa-angle-right.fr
+              span.data-choosegetcity 天津
+              div.clear
+            a(href="#").place
+              i.fa.fa-angle-right.fr
+              span.data-choosegetloca 天津站
+              div.clear
+          div.clear
+      div.a-wrapper
+        a(href="page-rentcar.html").submit-btn 去选车

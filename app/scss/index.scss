@@ -1,0 +1,2046 @@
+// Variables SCSS变量
+$themecolor: #ffd071;
+$submitbtnbg: #ffc34a;
+$btnbordercolor: #ff8f06;
+$orange: #ff831e;
+$borderlight:#bebebe;
+$bglight: #e6e6e6;
+$fontlight: #7d7d7d;
+
+/* ========== CONTENTS 目录 ========== */
+/* 1. RESET 改进默认样式 */
+/* 2. FLOAT 浮动 */
+/* 3. COMPONENTS 公用组件 */
+/* 4. PLACEHOLDER FONT 占位符字体 */
+/* 5. STAR 星星评价 */
+/* 6. STYLE OF EVERY PAGE 具体页面样式*/
+/*   (1) 还车城市 page-choosereturncity */
+/*   (2) 客户填写页 page-getcaptcha */
+/*   (3) 我的评论页 page-mycomment */
+/*   (4) 我的评论页 page-mycomment */
+/*   (5) 我的优惠券页 page-mycoupons */
+/*   (6) 我的订单 page-myorders */
+/*   (7) 我的积分页 page-myscore */
+/*   (8) 订车界面 page-ordercar */
+/*   (9) 专车订单详情页-立即叫车 page-ordercontact */
+/*   (10) 租车订单详情页 page-orderdetail */
+/*   (11) 专车订单页 page-orderexclusivecar */
+/*   (12) 个人中心 page-profile */
+/*   (13) 租车界面 page-rentcar */
+/*   (14) 我要分享 page-share */
+/*   (15) 我要分享 page-sharedetail */
+/*   (16) 图文内容页-客户撰写 page-story */
+/*   (17) 用车首页 page-index */
+/* ==================================== */
+
+/* ========== RESET 改进默认样式 ==========*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: '黑体', 'Microsoft Yahei', sans-serif;
+}
+ul,li {
+  list-style: none;
+}
+input, button {
+  border: none;
+  outline: none;
+}
+a {
+  text-decoration: none;
+}
+textarea {
+  resize: none;
+}
+
+/* ========== FLOAT 浮动 ==========*/
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clear {
+  clear: both;
+}
+
+/* ========== COMPONENTS 公用组件 ==========*/
+/* 黄色的字 */
+.yellowfont {
+  color: $themecolor;
+}
+
+.topbar {
+  height: 50px;
+  line-height: 50px;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  background: $themecolor;
+
+  & a {
+    width: 50px;
+    font-size: 42px;
+    color: white;
+  }
+  & p {
+    font-family: 'Microsoft Yahei', sans-serif;
+    margin: 0 50px;
+  }
+  & div.fr {
+    width: 50px;
+  }
+}
+.submit-btn {
+  padding: 16px 0;
+  border: 2px solid $btnbordercolor;
+  border-radius: 5px;
+  font-size: 24px;
+  color: white;
+  background: $submitbtnbg;
+}
+.normal-btn {
+  display: inline-block;
+  padding: 16px 0;
+  border-radius: 5px;
+  font-family: '黑体',sans-serif;
+  font-size: 24px;
+  color: white;
+  background: $themecolor;
+}
+.footer-btn {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  font-family: 'Microsoft Yahei', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  background: $themecolor;
+}
+
+/* ========== PLACEHOLDER FONT 占位符字体 ==========*/
+/* 通用 */
+::-webkit-input-placeholder {    font-family: '黑体', 'Microsoft Yahei', sans-serif;
+ color: $borderlight; }
+::-moz-placeholder {    font-family: '黑体', 'Microsoft Yahei', sans-serif;
+ color: $borderlight; } /* firefox 19+ */
+:-ms-input-placeholder {     font-family: '黑体', 'Microsoft Yahei', sans-serif;
+color: $borderlight; } /* ie */
+input:-moz-placeholder {     font-family: '黑体', 'Microsoft Yahei', sans-serif;
+color: $borderlight; }
+
+/* webkit专用 */
+#field2::-webkit-input-placeholder {    font-family: '黑体', 'Microsoft Yahei', sans-serif;
+ color: $borderlight; }
+#field3::-webkit-input-placeholder {    font-family: '黑体', 'Microsoft Yahei', sans-serif;
+ color: $borderlight; background:lightgreen; text-transform:uppercase; }
+#field4::-webkit-input-placeholder {    font-family: '黑体', 'Microsoft Yahei', sans-serif;
+ font-style:italic; text-decoration:overline; letter-spacing:3px; color:#999; }
+
+/* mozilla专用 */
+#field2::-moz-placeholder {    font-family: '黑体', 'Microsoft Yahei', sans-serif;
+ color: $borderlight; }
+#field3::-moz-placeholder {    font-family: '黑体', 'Microsoft Yahei', sans-serif;
+ color: $borderlight; background:lightgreen; text-transform:uppercase; }
+#field4::-moz-placeholder {    font-family: '黑体', 'Microsoft Yahei', sans-serif;
+ font-style:italic; text-decoration:overline; letter-spacing:3px; color: $borderlight; }
+
+ /* ========== STAR 星星评价 ==========*/
+ /* 星星点灯照亮我的家门 */
+ .star_bg {
+     width: 120px; height: 20px;
+     background: url(../images/star.png) repeat-x;
+     position: relative;
+     overflow: hidden;
+ }
+ .star {
+     height: 100%; width: 24px;
+     line-height: 6em;
+     position: absolute;
+     z-index: 3;
+ }
+ .star:hover {
+     background: url(../images/star.png) repeat-x 0 -20px!important;
+     left: 0; z-index: 2;
+ }
+ .star_1 { left: 0; }
+ .star_2 { left: 24px; }
+ .star_3 { left: 48px; }
+ .star_4 { left: 72px; }
+ .star_5 { left: 96px; }
+ .star_1:hover { width: 24px; }
+ .star_2:hover { width: 48px; }
+ .star_3:hover { width: 72px; }
+ .star_4:hover { width: 96px; }
+ .star_5:hover { width: 120px; }
+
+ /* 幕后的英雄，单选按钮 */
+ .score { position: absolute; clip: rect(0 0 0 0); }
+ .score:checked + .star {
+     background: url(../images/star.png) repeat-x 0 -20px;
+     left: 0; z-index: 1;
+ }
+ .score_1:checked ~ .star_1 { width: 24px; }
+ .score_2:checked ~ .star_2 { width: 48px; }
+ .score_3:checked ~ .star_3 { width: 72px; }
+ .score_4:checked ~ .star_4 { width: 96px; }
+ .score_5:checked ~ .star_5 { width: 120px; }
+
+ .star_bg:hover .star {  background-image: none; }
+
+
+ /* ========== STYLE OF EVERY PAGE==========*/
+ /* ========== 具体页面样式 ==========*/
+
+ /* 还车城市 page-choosereturncity */
+ .page-choosereturncity {
+
+     & .container p {
+       margin: 1rem 0;
+       margin-left: .5rem;
+     }
+     & .cities {
+       font-size: .5rem;
+
+         & li.eachcity {
+           width: 20%;
+           padding: 6px 3px;
+
+           & a {
+             display: inline-block;
+             width: 100%;
+             padding: 8px 0;
+             color: black;
+             text-align: center;
+             border: 1px solid $borderlight;
+           }
+         }
+     }
+
+ }
+
+ /* 客户填写页 page-getcaptcha */
+ .page-getcaptcha {
+   & .container {
+     padding-top: 100px;
+   }
+   & li {
+     padding: 7px 30px;
+     &:last-child {
+       margin-top: 100px;
+     }
+   }
+   & .enter-tel, & .enter-captcha-l {
+     padding: 3px 0;
+     border: 1px solid $btnbordercolor;
+   }
+   & .enter-tel {
+     & i {
+       width: 30px;
+       font-size: 2rem;
+       padding: 3px 6px;
+       color: $btnbordercolor;
+       border-right: 1px solid $borderlight;
+     }
+     & .input-wrapper {
+       margin-left: 35px;
+       padding: 5px 0;
+       padding-left: 5px;
+       & input {
+         width: 90%;
+         height: 30px;
+         font-size: 1rem;
+       }
+     }
+   }
+   & .enter-captcha {
+     padding: 3px 0;
+
+     & .enter-captcha-l {
+       margin-right: 110px;
+       & i {
+         width: 30px;
+         font-size: 1.2rem;
+         color: $btnbordercolor;
+         padding: 10px 5px;
+         border-right: 1px solid $borderlight;
+       }
+       & .input-wrapper {
+         margin-left: 35px;
+         padding: 5px 0;
+         padding-left: 5px;
+         & input {
+           width: 90%;
+           margin: 0 auto;
+           height: 30px;
+           font-size: 1rem;
+         }
+       }
+     }
+     & .enter-captcha-r {
+       width: 100px;
+       padding: 3px 0;
+
+       & button {
+         width: 100%;
+         padding: 10px;
+         color: white;
+         background: $submitbtnbg;
+         border: 1px solid $btnbordercolor;
+         border-radius: 5px;
+       }
+     }
+   }
+   & .btn-wrapper {
+     padding: 0 80px;
+     & button {
+       width: 100%;
+       font-size: 1rem;
+     }
+   }
+ }
+
+ /* 我的评论页 page-mycomment */
+ .page-mycomment {
+   & .container {
+     background: $bglight;
+    }
+   & .comment {
+     margin-bottom: 1rem;
+     padding: 1rem;
+     background: white;
+   }
+   & .titlename {
+     font-size: 1.2rem;
+     color: $themecolor;
+   }
+   & .detail {
+     margin-top: 1rem;
+     line-height: 1.2rem;
+     color: $fontlight;
+   }
+   & .info {
+     margin-top: 1rem;
+     color: $fontlight;
+     & .state {
+       width: 50px;
+       color: red;
+     }
+     & .time {
+       margin-right: 50px;
+     }
+   }
+   & .star-wrapper {
+     margin: 1rem 0;
+     & .star-bg {
+       width: 100%;
+     }
+   }
+   & .entercomment {
+     height: 150px;
+     padding: 0 10px;
+
+     & #entercomment {
+       padding: 5px;
+       width: 100%;
+       height: 100%;
+       border: 1px solid $themecolor;
+       border-radius: 5px;
+     }
+   }
+   & .uploadphotos {
+     margin-top: 1rem;
+     padding: 0 10px;
+     color: $themecolor;
+
+     & .uploadphotos-wrapper {
+       width: 80%;
+       margin: 0 auto;
+       display: flex;
+       flex-flow: row wrap;
+       justify-content: center;;
+     }
+     & .uploadphotos-btn-wrapper {
+       position: relative;
+       margin-left: 5px;
+     }
+     & input[type='button'] {
+       background: url('../images/icon-camera.gif') no-repeat;
+       background-position: 50%;
+       width: 2rem;
+       height: 2rem;
+       border: 1px solid $themecolor;
+       border-radius: 5px;
+       }
+     & input[type='file'] {
+         position: absolute;
+         opacity: 0;
+         width: 100%;
+         height: 100%;
+     }
+   }
+   & .btn-wrapper {
+     margin-top: 1rem;
+     padding: 0 60px;
+     & button {
+       width: 100%;
+       border-radius: 5px;
+       font-size: 1rem;
+     }
+   }
+ }
+
+ /* 我的优惠券页 page-mycoupons */
+ .page-mycoupons {
+   background: $bglight;
+    & .title {
+       position: relative;
+       height: 1.5rem;
+       text-align: center;
+       border-bottom: 1px dashed black;
+
+       & span {
+         position: absolute;
+         width: 20%;
+         left:40%;
+         bottom: -35%;
+         background: $bglight;
+       }
+    }
+   & .coupons {
+     margin-top: 2rem;
+   }
+
+    & .coupon {
+      margin-bottom: 2rem;
+      padding: 0 1rem;
+    }
+    & .coupon-wrapper {
+      background: white;
+      box-shadow: 5px 5px 10px #888;
+    }
+    & .coupon-wrapper-l {
+      width: 100px;
+      padding: 10px;
+      background: url('../images/coupon-line.png') no-repeat;
+      background-size: contain;
+      color: $themecolor;
+      text-align: center;
+      border-right: 1px dashed black;
+
+      & .coupon-price {
+        margin-top: 10%;
+        & .data-coupon-price {
+          font-size: 3rem;
+        }
+      }
+    }
+    & .coupon-wrapper-r {
+      margin-left: 100px;
+
+      & .coupon-wrapper-r-title {
+        position: relative;
+        padding-top: .2rem;
+        padding-left: 1rem;
+        & .coupon-title {
+          font-size: 1rem;
+          color: $themecolor;
+        }
+        & span {
+          font-size: .6rem;
+          color: $fontlight;
+        }
+        // “优惠券”字样
+        &:before {
+          content: '优惠券';
+          position: absolute;
+          top: 10px;
+          right: 0;
+          z-index: 1;
+          font-size: .5rem;
+          transform: rotate(45deg);
+        }
+        // “优惠券”字样下的黄色三角形
+        &:after {
+          position: absolute;
+          color: $themecolor;
+          width: 0;
+          height: 0;
+          content: '';
+          border-width: 25px;
+          border-style: solid;
+          border-left-color: transparent;
+          border-bottom-color: transparent;
+          top: 0;
+          right: 0;
+        }
+      }
+      & .coupon-wrapper-r-btn {
+        padding-top: .5rem;
+        & button {
+          margin-right: 1rem;
+          padding: .3rem 1rem;
+          background: white;
+          border: 1px solid $themecolor;
+          border-radius: 5px;
+        }
+      }
+    }
+ }
+
+ /* 我的订单 page-myorders */
+ .page-myorders {
+   background: $bglight;
+
+     & .order {
+       padding: 1rem;
+       margin: 2rem 0;
+       font-size: .8rem;
+       background: white;
+     }
+     & .title {
+       color: $themecolor;
+       font-size: 1.2rem;
+     }
+     & .info, & .status, & .comment {
+       color: $fontlight;
+       margin-top: 10px;
+     }
+
+     & .status {
+       & .state {
+         width: 100px;
+         color: red;
+         text-align: right;
+       }
+       & .time {
+         margin-right: 100px;
+
+         & .time-l {
+           & span:first-child {
+             width: 70px;
+           }
+           & span.data-booking-time {
+             display: block;
+             margin-left: 70px;
+           }
+         }
+       }
+     }
+     & .commentphotos {
+       & li {
+         margin-right: 10px;
+         width: 10%;
+
+         & img {
+           width: 100%;
+         }
+       }
+     }
+ }
+
+ /* 我的积分页 page-myscore */
+ .page-myscore {
+   & .container {
+     text-align: center;
+     width: 60%;
+     margin: 0 auto;
+     margin-top: 50px;
+   }
+
+    & .user-avatar {
+      & img {
+        width: 60%;
+        border: 2px solid $themecolor;
+        border-radius: 50%;
+      }
+    }
+    & .username {
+      margin-bottom: 50px;
+    }
+    & .totalscore .showscore {
+      color: red;
+    }
+    & button {
+      width: 100%;
+      margin-top: 90px;
+    }
+ }
+
+ /* 订车界面 page-ordercar */
+ .page-ordercar {
+
+     & .pickloca {
+       height: 100px;
+       margin: 50px 0;
+       border-top: 1px solid $borderlight;
+       border-bottom: 1px solid $borderlight;
+
+       & .pickloca-l {
+         width: 70px;
+         padding: 10px 10px;
+
+         & i.icon-car{
+           display: inline-block;
+           margin-top: 10%;
+           width: 3.5rem;
+           height: 3.5rem;
+           background: url('../images/icon-car.gif') no-repeat;
+           background: contain;
+         }
+         & span {
+           display: block;
+           font-size: .5rem;
+         }
+       }
+       & .pickloca-r {
+         width: 80px;
+         border-left: 2px solid $borderlight;
+         padding: 30px 5px;
+
+         & span:first-child {
+           font-weight: bold;
+           font-size: 1.2rem;
+         }
+         & span:last-child {
+           display: block;
+           font-size: .3rem;
+           color: $fontlight;
+         }
+       }
+       & .pickloca-m {
+         margin-left: 70px;
+         margin-right: 80px;
+         height: 100%;
+         & a {
+           display: block;
+           height: 50%;
+           padding: 10px 0;
+           font-size: 1.2rem;
+           color: black;
+           &:first-child {
+             border-bottom: 2px solid $borderlight;
+           }
+           & i {
+             width: 30px;
+             padding-right: 20px;
+             color: $borderlight;
+             font-size: 2rem;
+           }
+           & span {
+             margin-right: 30px;
+           }
+         }
+       }
+     }
+     & .a-wrapper .submit-btn {
+       display: block;
+       width: 60%;
+       margin: 0 auto;
+       text-align: center;
+     }
+ }
+
+ /* 专车订单详情页-立即叫车 page-ordercontact */
+ .page-ordercontact {
+   background: $bglight;
+
+     & li.contact-option {
+       height: 50px;
+       line-height: 50px;
+       margin: 1.5rem 0;
+       background: white;
+
+       & i {
+         color: $themecolor;
+       }
+     }
+     & .contact-tel {
+       & .contact-info {
+         width: 100px;
+         & i {
+           font-size: 1.5rem;
+           padding-left: 20px;
+         }
+         & span {
+           padding-right: 20px;
+         }
+       }
+       & .span-r {
+         width: 80px;
+         color: $borderlight;
+         border-left: 2px solid $borderlight;
+         text-align: center;
+       }
+       & .contact-input {
+         margin-left: 100px;
+         margin-right: 80px;
+         padding-right: 10px;
+         & input {
+           width: 100%;
+           height: 40px;
+           font-size: 1rem;
+           border: 1px solid $borderlight;
+         }
+       }
+     }
+     & .contact-loca {
+       & .contact-info {
+         width: 100px;
+         & i {
+           font-size: 1.5rem;
+           padding-left: 20px;
+         }
+         & span {
+           padding-right: 20px;
+         }
+       }
+       & .span-r {
+         width: 80px;
+         color: $borderlight;
+         border-left: 2px solid $borderlight;
+         text-align: center;
+       }
+       & .contact-input {
+         margin-left: 100px;
+         margin-right: 80px;
+         padding-right: 10px;
+         & input {
+           width: 100%;
+           height: 40px;
+           font-size: 1rem;
+           border: 1px solid $borderlight;
+         }
+       }
+     }
+     & .contact-category {
+       & li {
+         width: 33.3%;
+         border-left: 2px solid $borderlight;
+         text-align: center;
+
+         &:first-child {
+           border-left: 0;
+         }
+         & .contact-category-radio-wrapper {
+           width: 24px;
+           height: 18px;
+           padding-top: 2px;
+           padding-left: 2px;
+           text-align: center;
+           margin-right: 10px;
+           background-image: url('../images/icon-radio.gif');
+           background-repeat: no-repeat;
+           background-position: -24px 0;
+
+           & input[type='radio'] {
+             opacity: 0;
+           }
+         }
+         & .on {
+           background-position: 0 0;
+         }
+       }
+     }
+     & .contact-coupon {
+
+       & i.icon-mycoupon {
+         display: inline-block;
+         width: 40px;
+         height: 20px;
+         margin-top: 15px;
+         margin-right: 15px;
+         padding: 10px 0;
+         background: url('../images/icon-mycoupon-ordercontact.png') center no-repeat;
+         background-size: cover;
+       }
+
+       & .contact-coupon-l {
+         margin-right: 150px;
+         padding-left: 20px;
+         color: black;
+       }
+       & .contact-coupon-r {
+         width: 150px;
+         color: $borderlight;
+         & i {
+           color: $borderlight;
+           font-size: 2rem;
+           padding: 10px;
+         }
+       }
+     }
+
+     & .footerbar {
+       position: absolute;
+       width: 100%;
+       height: 50px;
+       line-height: 50px;
+       bottom: 0;
+       background: white;
+       & .footerbar-l {
+         margin-left: 10%;
+       }
+       & .footerbar-r {
+         width: 40%;
+
+         & input[type='submit'] {
+           width: 80%;
+           height: 2rem;
+           font-size: 1rem;
+           padding: 0;
+         }
+       }
+     }
+
+ }
+
+ /* 租车订单详情页 page-orderdetail */
+ .page-orderdetail {
+     & .swiper-container {
+       & .swiper-slide {
+         & img {
+           width: 100%;
+         }
+       }
+       & .swiper-pagination {
+         position: absolute;
+         bottom: 1rem;
+         padding-right: 1rem;
+         & .swiper-pagination-bullet {
+           float: right;
+           width: 2rem;
+           height: .5rem;
+           background: #c8c8c8;
+           border-radius: 1rem;
+         }
+         & .swiper-pagination-bullet-active {
+           background: white;
+         }
+       }
+     }
+     & li.car-detail {
+       color: $fontlight;
+       padding: 0 10px;
+     }
+     & .car-detail-l {
+       width: 200px;
+       padding: 10px 0;
+       & .price-per-day {
+         width: 100px;
+         & .rmbsign, & .data-price-per-day {
+           font-family: 'Microsoft Yahei', sans-serif;
+           font-weight: bold;
+           color: red;
+           font-size: 1.5rem;
+         }
+       }
+       & .price-per-hour {
+         margin-left: 100px;
+         padding-top: 10px;
+         & .rmbsign, & .data-price-per-hour {
+           font-family: 'Microsoft Yahei', sans-serif;
+         }
+       }
+     }
+     & .car-detail-r {
+       width: 100px;
+
+       & .data-car-name {
+         display: block;
+         text-align: right;
+         font-size: .5rem;
+       }
+     }
+     & .car-detail-m {
+       margin-left: 200px;
+       margin-right: 100px;
+     }
+     & li.car-choose-days {
+       border-top: 2px solid $borderlight;
+       border-bottom: 2px solid $borderlight;
+       color: $fontlight;
+      }
+      & .car-choose-days-placeholder-l, & .car-choose-days-placeholder-r {
+        width: 30px;
+      }
+      & .car-choose-days-wrapper {
+        text-align: center;
+        margin: 0 auto;
+        padding: 20px 0;
+        width: 50%;
+
+        & label.fl{
+          width: 100px;
+        }
+        & span.fr {
+          width: 10px;
+        }
+
+        & .select-wrapper {
+          margin-left: 100px;
+          margin-right: 10px;
+          overflow: hidden;
+          position: relative;
+
+          & select {
+            width: 80%;
+            height: 20px;
+            background: transparent;
+            border: 1px solid $borderlight;
+            -webkit-appearance: none; /*for chrome*/
+          }
+          // 下拉菜单的三角形
+          &:after {
+            position: absolute;
+            top: 30%;
+            right: 15%;
+            content: '';
+            border-color: $fontlight;
+            border-width: 10px;
+            border-left-width: 5px;
+            border-right-width: 5px;
+            border-style: solid;
+            border-left-color: transparent;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+          }
+        }
+      }
+
+ }
+
+ /* 专车订单页 page-orderexclusivecar */
+ .page-orderexclusivecar {
+
+   & .swiper-container {
+     & .swiper-slide {
+       & img {
+         width: 100%;
+       }
+     }
+     & .swiper-pagination {
+       position: absolute;
+       bottom: 2rem;
+       padding-right: 1rem;
+       & .swiper-pagination-bullet {
+         float: right;
+         width: 2rem;
+         height: .5rem;
+         background: #c8c8c8;
+         border-radius: 1rem;
+       }
+       & .swiper-pagination-bullet-active {
+         background: white;
+       }
+     }
+   }
+
+   & .ordersection {
+     & a {
+       color: black;
+     }
+     & ul {
+       margin-top: 2rem;
+       padding: 0 50px;
+     }
+
+      & li.div-group {
+        margin-bottom: 1rem;
+      }
+      & .order-choice {
+        width: 40%;
+        border: 1px solid $themecolor;
+        border-radius: .5rem;
+        text-align: center;
+
+        & a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          & i {
+            display: inline-block;
+            width: 2.5rem;
+            height: 2.5rem;
+          }
+          & span {
+            display: block;
+          }
+        }
+      }
+   }
+   & i.icon-orderexclu-tree1 {
+     background: url('../images/icon-orderexclucar-tree1.jpg') no-repeat;
+     background: cover;
+   }
+   & i.icon-orderexclu-tree2 {
+     background: url('../images/icon-orderexclucar-tree2.jpg') no-repeat;
+     background: cover;
+   }
+   & i.icon-orderexclu-train1 {
+     background: url('../images/icon-orderexclucar-train1.jpg') no-repeat;
+     background: cover;
+   }
+   & i.icon-orderexclu-train2 {
+     background: url('../images/icon-orderexclucar-train2.jpg') no-repeat;
+     background: cover;
+   }
+   & i.icon-orderexclu-plane1 {
+     background: url('../images/icon-orderexclucar-plane1.jpg') no-repeat;
+     background: cover;
+   }
+   & i.icon-orderexclu-plane2 {
+     background: url('../images/icon-orderexclucar-plane2.jpg') no-repeat;
+     background: cover;
+   }
+ }
+
+ /* 个人中心 page-profile */
+ .page-profile {
+   height: 100%;
+   background: $bglight;
+     & .user {
+       position: relative;
+       padding: .5rem 0;
+       background: url('../images/profile-bg.png') no-repeat;
+       background-size: cover;
+       text-align: center;
+
+       & .user-avatar {
+         & img {
+           width: 9rem;
+           height: 9rem;
+           border: 2px solid $themecolor;
+           border-radius: 50%;
+         }
+       }
+       & .username {
+         margin-top: .5rem;
+         color: white;
+       }
+     }
+     & .profile-settings {
+       & li {
+         margin: 1rem 0;
+       }
+       & .profile-setting {
+         display: block;
+         position: relative;
+         width: 100%;
+         background: white;
+
+         & span {
+           width: 100%;
+           height: 4rem;
+           line-height: 4rem;
+           color: black;
+         }
+       }
+       & i.icon {
+         margin: 1rem 1rem 0;
+         width: 2rem;
+         height: 2rem;
+       }
+       & i.icon-myorder {
+         background: url('../images/icon-myorder.png') no-repeat;
+         background-size: contain;
+
+       }
+       & i.icon-mycoupon {
+         background: url('../images/icon-mycoupon.png') no-repeat;
+         background-size: contain;
+       }
+       & i.icon-myscore {
+         background: url('../images/icon-myscore.png') no-repeat;
+         background-size: contain;
+       }
+       & i.icon-mycomment {
+         background: url('../images/icon-mycomment.png') no-repeat;
+         background-size: contain;
+       }
+       & .fa-angle-right {
+         margin-top: .5rem;
+         margin-right: .5rem;
+         font-size: 3rem;
+         color: $themecolor;
+       }
+     }
+ }
+
+ /* 租车界面 page-rentcar */
+ .page-rentcar {
+
+     & li {
+       border-bottom: 2px solid $borderlight;
+
+       & a {
+         display: block;
+         width: 100%;
+         height: 100%;
+       }
+     }
+     & .car-option-detail, & .car-option-price.fr {
+       height: 100%;
+     }
+     & .car-option-img-wrapper.fl {
+       width: 90px;
+       padding: 30px 0;
+       padding-left: 10px;
+
+       & img {
+         width: 100%;
+       }
+     }
+     & .car-option-detail {
+       margin: 0 100px;
+       line-height: 2rem;
+       & .car-brand {
+         padding-top: 20px;
+         font-size: 1.2rem;
+         font-weight: bold;
+         color: $themecolor;
+       }
+       & .car-traits {
+         padding-bottom: 20px;
+         color: $fontlight;
+         font-size: .8rem;
+       }
+     }
+     & .car-option-price.fr {
+       width: 90px;
+       padding-right: 10px;
+
+       & .car-option-price-l {
+           color: black;
+           line-height: 20px;
+           padding: 30px 0;
+           & p {
+             vertical-align: bottom;
+           }
+           & span {
+             color: red;
+             font-family: 'Microsoft Yahei', sans-serif;
+             font-weight: bold;
+             font-size: 1.2rem;
+             vertical-align: top;
+           }
+       }
+       & i {
+         font-size: 3rem;
+         color: $fontlight;
+         line-height: 100px;
+       }
+     }
+ }
+
+ /* 我要分享 page-share */
+ .page-share {
+   & .container {
+     text-align: center;
+     width: 40%;
+     margin: 0 auto;
+     margin-top: 50px;
+   }
+  & a.sharelink {
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    border: 1px solid $themecolor;
+  }
+  & a.sharelink:link, & a.sharelink:visited {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+  }
+ }
+
+ /* 我要分享 page-sharedetail */
+ .page-sharedetail {
+ 	background: $bglight;
+
+     & .shared-order {
+       margin: 1rem 0;
+       padding: 1rem;
+       background: white;
+       border-bottom: 1px solid black;
+       box-shadow: 0 1px 10px #888;
+     }
+
+      &  .shared-order-info {
+        & span {
+          margin-right: 1rem;
+
+          &:first-child {
+            margin-right: 0;
+          }
+        }
+      }
+      & .shared-order-content {
+        line-height: 2rem;
+      }
+      & .shared-order-img {
+        width: 40%;
+        & img {
+          width: 100%;
+        }
+      }
+
+ }
+
+ /* 图文内容页-客户撰写 page-story */
+ .page-story {
+   header {
+     position: relative;
+     & i {
+       position: absolute;
+       color: white;
+       top: 5%;
+     }
+     & i.fa-angle-left {
+       left: 5%;
+       font-size: 2rem;
+     }
+     & i.icon-story-header-share {
+       background: url('../images/icon-story-header-share.png') no-repeat;
+       background-size: contain;
+       right: 5%;
+       width: 2rem;
+       height: 2rem;
+     }
+     & img {
+       width: 100%;
+     }
+   }
+   & .essay-wrapper {
+     padding-top: 2rem;
+     & h2 {
+       width: 90%;
+       margin: 0 auto;
+       font-family: 'Microsoft Yahei', sans-serif;
+     }
+     & .essay-pageviews {
+       width: 90%;
+       margin: 0 auto;
+       line-height: 2rem;
+       color: $fontlight;
+     }
+     & .essay-content {
+       & .essay-content-writing {
+         padding: 1rem 0;
+         width: 90%;
+         margin: 0 auto;
+         & p {
+           line-height: 1.5rem;
+           text-indent: 2rem;
+         }
+       }
+
+       & img {
+         width: 100%;
+       }
+       & .essay-content-about {
+         padding: 4rem 1rem 4rem 0;
+         line-height: 2rem;
+         text-align: right;
+       }
+     }
+   }
+ }
+
+ /* 用车首页 page-index */
+.page-index {
+  background: $bglight;
+  height: 100%;
+
+  & .img-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+  }
+  & a {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    color: white;
+    padding: .5rem 1rem;
+    background: $themecolor;
+    border-radius: 5px;
+  }
+  & li {
+    position: relative;
+  }
+  & .rent-car {
+    top: 0;
+    background: url('../images/rent-car-index-1.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  & .get-car {
+    bottom: 0;
+    background: url('../images/rent-car-index-2.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+/* 包车订单车辆选择页面 page-get-car-choose-car */
+.page-get-car-choose-car {
+  & .top-with-shadow {
+    padding-left: 1rem;
+    line-height: 1.5rem;
+    color: $themecolor;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, .5);
+  }
+  & span.rect {
+    margin-right: .5rem;
+    font-size: .8rem;
+    color: white;
+    background: $themecolor;
+  }
+
+  & section {
+    padding: 10rem 2rem;
+    padding-top: 8rem;
+
+    & li {
+      padding-left: .5rem;
+      padding-right: .5rem;
+      border-top: 1px solid $borderlight;
+
+      &:first-child {
+        border-top: none;
+      }
+    }
+  }
+  & .slogan {
+    text-align: center;
+    padding: 1rem;
+    font-size: .8rem;
+    color: white;
+    background: $themecolor;
+    border-radius: 5px;
+  }
+  & .choose-car-detail {
+    margin-top: 1rem;
+    border: 1px solid $borderlight;
+    border-radius: 5px;
+    color: $fontlight;
+  }
+  & li.car-size {
+    padding: .5rem 0;
+    height: 120px;
+    text-align: center;
+
+    & .car-size-price {
+      padding-top: 10px;
+      & .seven-price {
+        margin-left: 50px;
+      }
+      & .on {
+        color: $themecolor;
+      }
+    }
+    & .car-size-main {
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+
+      & .on {
+        border: 1px solid $themecolor;
+        color: $themecolor;
+      }
+    }
+    & .five, & .seven {
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+      border: 1px solid $borderlight;
+      border-radius: 50%;
+    }
+    & .five {
+      margin-right: 10px;
+    }
+    & i {
+      font-style: normal;
+    }
+    & i.icon-five, & i.icon-seven {
+      display: inline-block;
+      margin-top: 20px;
+      width: 80px;
+      height: 30px;
+      background: url('../images/icons/icons-real-car.png') no-repeat;
+    }
+    & i.icon-five {
+      margin-left: 5px;
+    }
+    & i.icon-seven {
+      background-position: -115px 0;
+    }
+  }
+  & li.coupon {
+    height: 50px;
+    line-height: 50px;
+    & span {
+      padding: .5rem;
+      color: white;
+      background: $themecolor;
+    }
+  }
+  & li.car-info-price {
+
+    & .car-info {
+      height: 60px;
+      line-height: 30px;
+      & p {
+        font-size: 1.2rem;
+        color: $themecolor;
+      }
+    }
+    & .car-price {
+      margin-top: 1.2rem;
+      font-size: 1.5rem;
+      color: $themecolor;
+    }
+  }
+  & li.car-tel {
+    height: 50px;
+    line-height: 50px;
+    & span:first-child {
+      color: $themecolor;
+    }
+  }
+
+  & .footer-with-shadow {
+    height: 60px;
+    border-top: 1px solid $borderlight;
+    box-shadow: 1px 1px 5px rgba(0,0,0,.5);
+
+    & .footer-with-shadow-l {
+      padding-left: 1rem;
+      margin-right: 100px;
+      line-height: 30px;
+    }
+    & .footer-with-shadow-r {
+      width: 100px;
+      background: $themecolor;
+      text-align: center;
+      & button  {
+        height: 60px;
+        font-size: 1.2rem;
+        color: white;
+        background: $themecolor;
+      }
+    }
+  }
+}
+
+/* 包车订单时间选择页面 page-get-car-choose-time */
+.page-get-car-choose-time {
+
+  /* 弹出： 选择时间*/
+  & .pop-container {
+    width:  100%;
+    background: white;
+    text-align: left;
+
+    & .pop-title {
+      padding: .5rem;
+      color: #3bb9ff;
+      border-bottom: 2px solid #3bb9ff;
+    }
+    & .pop-main {
+      padding: 1rem;
+      text-align: center;
+      & ul {
+        display: inline-block;
+      }
+      & li {
+        height: 100px;
+        text-align: center;
+        width: 20%;
+        margin-right: 12px;
+      }
+      & .input-wrapper {
+        height: 30px;
+        line-height: 30px;
+      }
+      & input {
+        text-align: center;
+        width: 50%;
+      }
+      /* 加号和减号 */
+      & div.plus, & div.minus {
+        color: grey;
+        background: $borderlight;
+        box-shadow: 1px 1px 5px rgba(0,0,0,.5);
+      }
+    }
+  }
+
+  & section {
+    padding: 2rem 1rem 0;
+  }
+  & .big-li {
+    margin-bottom: 2rem;
+    padding-left: .5rem;
+    border: 1px solid $borderlight;
+    border-radius: 5px;
+    box-shadow: 1px 6px 10px rgba(0,0,0,.5);
+
+    & li {
+      height: 30px;
+      line-height: 30px;
+      border-top: 1px solid $borderlight;
+
+      &:first-child {
+        border-top: none;
+      }
+      & .key {
+        padding-right: .5rem;
+        font-weight: bold;
+        border-right: 1px solid $borderlight;
+      }
+      & .value {
+        & input {
+          padding-left: .5rem;
+        }
+      }
+    }
+  }
+  & .choose-type {
+    text-align: center;
+  }
+  & .choose-type-group {
+    & li {
+      margin-right: 10px;
+    }
+  }
+  & .round-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    border: 1px solid $borderlight;
+    border-radius: 50%;
+
+    & p {
+      font-size: .5rem;
+    }
+    & i {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background: url('../images/icons/icons-order-time.png') no-repeat;
+    }
+    & i.icon-jieji {
+      background-position: 0px -5px;
+    }
+    & i.icon-jiezhan {
+      background-position: -95px -5px;
+    }
+    & i.icon-jingdian {
+      background-position: -195px -5px;
+    }
+    & i.icon-songji {
+      background-position: 0px -110px;
+    }
+    & i.icon-songzhan {
+      background-position: -100px -110px;
+    }
+    & i.icon-shangche {
+      width: 60px;
+      background-position: -190px -110px;
+    }
+  }
+
+  /* 被选中的项 */
+  & .choose-type-on {
+    & .round-icon-wrapper {
+      border: 1px solid $themecolor;
+      color: $themecolor;
+    }
+    & i {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background: url('../images/icons/icons-order-time-on.png') no-repeat;
+    }
+    & span {
+      color: $themecolor
+    }
+  }
+}
+
+/* 租车订单确认 page-check-rent-car-order */
+.page-check-rent-car-order {
+  & section {
+    padding: 0 1rem;
+  }
+  & form {
+    padding: 0 1rem;
+    padding-top: 1rem;
+
+    & li {
+      margin-bottom: 1rem;
+      height: 40px;
+      line-height: 40px;
+      border: 1px solid $borderlight;
+
+      & .i-wrapper {
+        margin-top: 5px;
+        text-align: center;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        border-right: 1px solid $borderlight;
+
+        & i {
+          font-size: 2rem;
+          color: $themecolor;
+        }
+        & i.fa-envelope {
+          font-size: 1.2rem;
+        }
+        & i.fa-clock-o {
+          font-size: 1.4rem;
+        }
+      }
+      & .input-wrapper {
+          margin-left: 30px;
+        & input {
+          width: 90%;
+          height: 30px;
+          font-size: 1rem;
+          text-indent: .5rem;
+        }
+      }
+    }
+    & li.get-captcha-li {
+      border: none;
+      & .get-captcha-li-l {
+        margin-right: 90px;
+        border: 1px solid $borderlight;
+      }
+      & .get-captcha-li-r {
+        width: 80px;
+        text-align: center;
+        & button {
+          width: 100%;
+          padding: .8rem 0;
+          color: white;
+          background: $themecolor;
+          border-radius: 5px;
+        }
+      }
+    }
+    & li.set-time-li {
+
+      & .input-wrapper {
+        margin-top: -2px;
+        margin-left: 30px;
+        height: 30px;
+        & input.short-input {
+          width: 45%;
+          height: 30px;
+          font-size: .5rem;
+          border-left: 1px solid $borderlight;
+
+
+          &:first-child {
+            border-left: none;
+          }
+        }
+      }
+    }
+    & textarea {
+      width: 100%;
+      padding: .5rem;
+    }
+  }
+  & .order-details {
+    margin-top: 1rem;
+
+    & .key {
+      color: black;
+    }
+    & .value {
+      & i {
+        padding-top: 10px;
+        color: $fontlight;
+        font-size: 2rem;
+      }
+      & span {
+        margin-right: 10px;
+      }
+    }
+    & li.big-li {
+      height: 50px;
+      line-height: 50px;
+      border-top: 2px dashed $themecolor;
+    }
+    & li.checked-detail {
+      padding: 1rem 0;
+      border-top: 2px dashed $themecolor;
+      border-bottom: 2px dashed $themecolor;
+    }
+    & li.small-li {
+      height: 30px;
+      line-height: 30px;
+
+      & .value {
+        color: red;
+      }
+    }
+  }
+  & .footer-with-shadow {
+    width: 100%;
+    padding: 0 1rem;
+    margin-top: 1rem;
+    height: 60px;
+    line-height: 60px;
+    background: white;
+    box-shadow: 1px 1px 15px rgba(0,0,0,.5);
+    & .footer-with-shadow-l {
+      color: red;
+
+      & .discount {
+        margin-right: 5px;
+      }
+      & .price {
+        margin-right: 10px;
+      }
+    }
+    & .footer-with-shadow-r {
+      & button {
+        padding: .5rem 1rem;
+        color: white;
+        background: $themecolor;
+        border-radius: 5px;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+/* 规则页面 page-rules */
+.page-rules {
+  & section {
+    padding: 0 2rem;
+  }
+  & p.main-title {
+    line-height: 3rem;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  & p.yellowfont {
+    line-height: 3rem;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  & div.price-wrapper {
+    line-height: 3rem;
+    font-size: 1.2rem;
+  }
+  & div.price-rules {
+    line-height: 2rem;
+    & p:last-child {
+      line-height: 1.5rem;
+      font-size: .8rem;
+      color: $fontlight;
+    }
+  }
+
+  & ul {
+    & li {
+      margin: 3rem 0;
+      & p.title {
+        padding-bottom: 1rem;
+        text-align: center;
+        border-bottom: 1px solid $borderlight;
+      }
+      & p:last-child {
+        line-height: 2rem;
+        font-size: .8rem;
+      }
+    }
+  }
+  & .footer-with-shadow {
+    width: 100%;
+    text-align: center;
+    height: 50px;
+    box-shadow: 1px 1px 35px rgba(0,0,0,.5);
+
+    & .i-wrapper {
+      display: inline-block;
+    }
+    & i {
+      width: 50px;
+      height: 50px;
+      font-size: 3rem;
+    }
+  }
+}
+
+/* 增值服务页 page-zengzhi*/
+.page-zengzhi {
+  & section {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 10rem;
+  }
+  & .img-wrapper {
+    & img {
+      width: 100%;
+    }
+  }
+  & ul.zengzhi-ul {
+    margin-bottom: 5rem;
+  }
+  & li.zengzhi-li {
+    position: relative;
+    text-align: center;
+    width: 20%;
+
+    & a {
+      display: block;
+      padding-top: .5rem;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: $orange;
+      border: 3px solid $orange;
+    }
+
+    &::after {
+      position: absolute;
+      top: 50px;
+      left: 25px;
+      content: '';
+      width: 2px;
+      height: 100px;
+      background: $orange;
+    }
+  }
+  & li.zengzhi-li.digital {
+    &::after {
+      height: 70px;
+    }
+  }
+  & li.zengzhi-li.deco, & li.zengzhi-li.insurance {
+    &::after {
+      height: 80px;
+    }
+  }
+
+  & .text-wrapper {
+    text-align: center;
+
+    & a {
+      margin: 1rem 0;
+      display: inline-block;
+      padding: .5rem 1rem;
+      background: $themecolor;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+  }
+
+  /* 弹窗： checkbox */
+  & .pop-container {
+    background: #f5f5f5;
+
+    & .pop-title {
+      height: 40px;
+      line-height: 40px;
+
+      & .fl, & .fr {
+        width: 30px;
+      }
+      & p {
+        margin: 0 30px;
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+      & .i-wrapper {
+        font-size: 1.5rem;
+      }
+    }
+    & .pop-main {
+
+      & .pop-li {
+        background: white;
+        height: 100px;
+        border-bottom: 4px solid $themecolor;
+
+        /* checkbox */
+        & .pop-li-r {
+          height: 100%;
+          line-height: 100px;
+          width: 50px;
+        }
+        & .pop-li-l {
+          margin-right: 50px;
+        }
+
+        /* 图片正方形自适应*/
+        & .figure-wrapper {
+          margin-top: 20px;
+          margin-left: 10px;
+          width: 60px;
+          height: 60px;
+          & figure {
+            border-radius: 5px;
+            position: relative;
+            width: 100%;
+            height: 0;
+            overflow: hidden;
+            margin: 0;
+            padding-bottom: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+        }
+
+        & .text-wrapper {
+          margin-left: 70px;
+          padding: 1rem .5rem;
+          height: 90px;
+          text-align: left;
+          font-size: .8rem;
+          font-weight: bold;
+          overflow: hidden;
+        }
+      }
+    }
+    & .pop-btn {
+      padding: 1rem;
+      & button {
+        padding: .5rem 1rem;
+        color: white;
+        background: $themecolor;
+        border-radius: 5px;
+      }
+    }
+    & .pop-btn#checkout-wrapper {
+      padding-top: 0;
+    }
+  }
+
+  /* 弹窗： 商品细节轮播图 */
+  & .pop-product-swiper {
+    background: transprent;
+    & .pop-main {
+      & .swiper-container {
+        & .swiper-title {
+          color: $themecolor;
+          & i {
+            color: white;
+          }
+        }
+        & .swiper-slide {
+          & img {
+            width: 100%;
+          }
+        }
+        & .swiper-pagination {
+          position: absolute;
+          z-index: 999;
+          & .swiper-pagination-bullet {
+            float: right;
+            width: 50px;
+            height: 20px;
+            background: red;
+            border-radius: 1rem;
+          }
+          & .swiper-pagination-bullet-active {
+            background: white;
+          }
+        }
+      }
+    }
+  }
+
+  /* 弹窗： 兑换订单确认 */
+  & .pop-checkout {
+    & .pop-title {
+      height: 40px;
+      line-height: 40px;
+      background: $themecolor;
+      color: white;
+
+      & .fl, & .fr {
+        width: 30px;
+      }
+      & p {
+        margin: 0 30px;
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+      & .i-wrapper {
+        font-size: 1.2rem;
+      }
+    }
+    & .pop-main {
+      padding: 1rem .5rem;
+      padding-left: 0;
+      text-align: left;
+
+      & p {
+        padding-left: .5rem;
+        padding-bottom: .5rem;
+      }
+      & li {
+        position: relative;
+        margin: .5rem 0;
+        & .fl {
+          background: white;
+          position: absolute;
+          z-index: 1;
+          left: 5px;
+          text-align: center;
+          padding-top: 12px;
+          width: 50px;
+          height: 50px;
+          border: 2px solid $themecolor;
+          border-radius: 50%;
+          color: $themecolor;
+        }
+        & .products {
+          padding-left: 30px;
+          margin-left: 30px;
+          height: 50px;
+          border: 2px solid $themecolor;
+          border-radius: 0 5px 5px 0;
+          font-size: .8rem;
+
+          & span {
+            vertical-align: middle;
+          }
+        }
+      }
+      & .total-price, & .note {
+        padding: .5rem 0;
+        text-align: right;
+      }
+      & .note {
+        font-size: .6rem;
+      }
+    }
+    & .pop-btn {
+      padding-bottom: 2rem;
+      & button {
+        padding: .5rem 1rem;
+        color: white;
+        background: $themecolor;
+        border-radius: 5px;
+      }
+    }
+  }
+}
